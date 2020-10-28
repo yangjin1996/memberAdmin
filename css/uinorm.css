@@ -1,0 +1,127 @@
+/* 字体 */
+.text-size-22 {
+	font-size: 22upx;
+	font-family: FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(154, 152, 152, 1);
+}
+.text-size-24 {
+	font-size: 24upx;
+	font-family:FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(154, 152, 152, 1);
+}
+.text-size-26 {
+	font-size: 26upx;
+	font-family:FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(154, 152, 152, 1);
+}
+.text-size-28 {
+	font-size: 28upx;
+	font-family:FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(154,152,152,1);
+}
+.text-size-30 {
+	font-size: 30upx;
+	font-family:FZLTHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(154, 152, 152, 1);
+}
+.text-size-32 {
+	font-size: 32upx;
+	font-family: FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(85,84,84,1);
+}
+.text-size-34 {
+	font-size: 34upx;
+	font-family:FZZZHONGJW--GB1-0;
+	font-weight: 400;
+	color: rgba(85,84,84,1);
+}
+.text-size-36 {
+	font-size: 36upx;
+	font-family:FZLTHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(154, 152, 152, 1);
+}
+.text-size-50 {
+	font-size: 50upx;
+	font-family:FZLTHK--GBK1-0;
+	font-weight: bold;
+	color: rgba(154, 152, 152, 1);
+}
+.text-size-40 {
+	font-size: 40upx;
+	
+	font-family:FZLTHK--GBK1-0;
+	font-weight: bold;
+	color: rgba(154, 152, 152, 1);
+}
+.text-size-38 {
+	font-size: 32upx;
+	font-family: FZLTKHK--GBK1-0;
+	font-weight: 400;
+}
+/* 字体颜色 */
+.text-color-menu{
+	color:rgba(0,205,118,1);
+}
+.text-color-head{
+	color:rgba(70,70,70,1);
+}
+.text-color-cell{
+	color:rgba(85,84,84,1);
+}
+.text-color-tag{
+	color:rgba(120,120,120,1);
+}
+.text-color-gray{
+	color:rgba(140,139,139,1);
+}
+.text-color-value1{
+	color:rgba(154,152,152,1);
+}
+.text-color-value2{
+	color:rgba(182,181,181,1);
+}
+.text-color-annotation{
+	color:rgba(194,193,193,1);
+}
+.image_large{
+	width: 200upx;
+	height: 200upx;
+}
+.image_medium{
+	width: 160upx;
+	height: 160upx;
+}
+.image_small{
+	width: 88upx;
+	height: 88upx;
+}
+.image_minimum{
+	width: 60upx;
+	height: 60upx;
+}
+.bg-orange-menu{
+	background-color: #FE5D3C;
+}
+.bg-magenta-menu{
+	background-color: #FC5252;
+}
+.text-orange-menu{
+	color: #FE5D3C;
+}
+.text-magenta-menu{
+	color: #FC5252;
+}
+.text-center{
+	text-align: center;
+	align-items: center;
+}
+.margin-line{
+	margin-top: 2upx;
+}

@@ -1,0 +1,108 @@
+.contents-header,
+.contents-header-image {
+	height: 388upx;
+}
+
+.contents-header-text {
+	align-items: center;
+	height: 180upx;
+}
+
+
+
+.contents-header-desc {
+	font-size: 26upx;
+	font-family: FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(216, 214, 214, 1);
+	line-height: 32upx;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-top: 12upx;
+	width: 75%;
+}
+
+.header-info-title {
+	font-size: 32upx;
+	font-family: '黑体';
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: 32upx;
+}
+
+.community-toast-boxs {
+	padding-left: 24upx;
+	padding-right: 24upx;
+	padding-top: 30upx;
+	padding-bottom: 30upx;
+	background-color: #FFFFFF;
+}
+
+.community-toast {
+	background: rgba(249, 249, 249, 1);
+
+	border-radius: 8upx;
+	padding-left: 20upx;
+	padding-right: 15upx;
+	padding-top: 15upx;
+	padding-bottom: 15upx;
+
+}
+
+.community-toast-tag {
+	width: 100upx;
+	height: 34upx;
+	background: rgba(0, 205, 118, 1);
+	border-radius: 17upx;
+	font-size: 24upx;
+	font-family: '黑体';
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: 32upx;
+	margin-right: 20upx;
+	padding-left: 10upx;
+	padding-right: 10upx;
+	padding-top: 6upx;
+	padding-bottom: 6upx;
+}
+
+.community-toast-text {
+	font-size: 30upx;
+	font-family: FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(194, 193, 193, 1);
+	line-height: 32upx;
+	width: 80%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.community-author {
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 17upx;
+	padding-left: 20upx;
+	padding-right: 20upx;
+	padding-top: 6upx;
+	padding-bottom: 6upx;
+	font-size: 26upx;
+	font-family: '黑体';
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: 32upx;
+	width: 250upx;
+	text-align: center;
+	margin-top: 28upx;
+}
+
+.dis-join {
+	background: rgba(0, 205, 118, 1);
+	border-radius: 17upx;
+	font-size: 24upx;
+	font-family: FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: 32upx;
+	border: 1upx solid rgba(0, 205, 118, 1);
+}

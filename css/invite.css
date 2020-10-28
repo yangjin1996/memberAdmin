@@ -1,0 +1,153 @@
+.invite-header-project {
+		display: flex;
+		padding-left: 37upx;
+		background-color: #EDEDED;
+		border-radius: 12upx;
+		height: 200upx;
+		line-height: 200upx;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 10upx;
+		align-items: center;
+	}
+
+
+
+	.invite-top {
+		width: 100%;
+		height: 500upx;
+		padding-left: 100upx;
+		padding-right: 100upx;
+		padding-top: 130upx;
+		background-size: 100% 100%;
+		background-image: url(http://www.homeeyes.cn/app/images/bg_share_top.png);
+	}
+
+	.invite-center {
+		width: 100%;
+		height: 230upx;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 320upx;
+		padding-top: 45upx;
+		background-size: 100% 100%;
+		background-image: url(http://www.homeeyes.cn/app/images/bg_share_center.png);
+	}
+
+	.invite-header-boxs {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 430upx;
+		padding-left: 24upx;
+		padding-right: 24upx;
+		text-align: center;
+
+	}
+
+	.invite-bottom {
+		width: 100%;
+		height: 875upx;
+		padding-left: 10upx;
+		padding-right: 10upx;
+		padding-top: 24upx;
+		padding-bottom: 16upx;
+		background-size: 100% 100%;
+		background-image: url(http://www.homeeyes.cn/app/images/bg_share_bottom.png);
+	}
+
+	.invite-header-image {
+		width: 100upx;
+		height: 100upx;
+		border-radius: 50%;
+	}
+
+	.invite-header-project-image {
+		width: 120upx;
+		height: 120upx;
+		border-radius: 50%;
+		margin-right: 15upx;
+	}
+
+	.header-project-text {
+		line-height: 36upx;
+		padding-top: 4upx;
+		padding-bottom: 4upx;
+	}
+
+	.invite-header-project-text,
+	.invite-header-project-image {
+		line-height: 200upx;
+
+	}
+
+	.contents {
+		position: relative;
+		background-color: #FFFFFF;
+	}
+
+	.invite-header-text {
+		text-align: center;
+		line-height: 34upx;
+
+	}
+
+	.header-boxs-user {
+		background: rgba(255, 255, 255, 1);
+		border-radius: 10upx;
+		height: 273upx;
+		text-align: center;
+		padding: 26upx;
+	}
+
+	.invite-header-name {
+		font-size: 28upx;
+		font-family: '黑体';
+		font-weight: 400;
+		color: rgba(255, 255, 255, 1);
+	}
+
+	.invite-header-title {
+		font-size: 40upx;
+		font-family: SimHei;
+		font-weight: 400;
+		color: rgba(67, 66, 66, 1);
+		margin-top: 15upx;
+	}
+
+	.invite-bottom-top {
+		background: rgba(235, 238, 245, 1);
+		padding-left: 14upx;
+		padding-right: 14upx;
+		padding-top: 16upx;
+		padding-bottom: 16upx;
+	}
+
+	.invite-bottom-bottom {
+		margin-top: 80upx;
+	}
+
+	.invite-header-project-title {
+		font-size: 36upx;
+		font-family: FZLTHK--GBK1-0;
+		font-weight: 400;
+		color: rgba(85, 84, 84, 1);
+		margin-bottom: 8upx;
+	}
+
+	.project-item-title {
+		font-size: 26upx;
+		font-family: FZLTKHK--GBK1-0;
+		font-weight: 400;
+		color: rgba(154, 152, 152, 1);
+		line-height: 36upx;
+	}
+
+	.project-item-value {
+		font-size: 32upx;
+		font-family: SimHei;
+		font-weight: 400;
+		color: rgba(0, 205, 118, 1);
+		line-height: 36upx;
+		margin-left: 8upx;
+	}
