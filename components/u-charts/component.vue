@@ -63,6 +63,7 @@
 					type: 'ring',
 					fontSize:11,
 					legend:true,
+					padding:[15,10,15,10],
 					title: {
 						name: '总提成',
 						color: '#333333',

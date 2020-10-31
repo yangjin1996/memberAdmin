@@ -1096,7 +1096,7 @@ button.cuIcon.lg {
 	border-top: 6upx solid rgba(0, 0, 0, 0.05);
 	border-right: 6upx solid rgba(0, 0, 0, 0.05);
 	border-bottom: 6upx solid rgba(0, 0, 0, 0.05);
-	border-left: 6upx solid #f37b1d;
+	border-left: 6upx solid #258AFE;
 	animation: cuIcon-spin 1s infinite linear;
 	z-index: -1;
 }
@@ -3001,6 +3001,40 @@ scroll-view.cu-steps .cu-item {
 	width: 14.28%;
 }
 
+/* 颜色配置 */
+.text-color-3{
+	color: #333 !important;
+}
+.text-finish{
+	color: #F10000;
+}
+.text-color-9{
+	color: #999;
+}
+.text-color-6{
+	color: #666;
+}
+.text-color{
+	color: #258AFE !important;
+}
+.text-color-white{
+	color: #fff;
+}
+.text-color-orange{
+	color: #FF8400 !important;
+}
+.bg-color{
+	background-color: #258AFE !important;
+}
+.bg-color-white{
+	background-color: #ffffff !important;
+}
+.bg-color-a{
+	background: linear-gradient(to bottom, #258AFE, #5BA0FF);
+}
+.bg-color-b{
+	background: linear-gradient(to bottom, #FFA200, #FFB642);
+}
 /*  -- 内外边距 -- */
 
 .margin-0 {

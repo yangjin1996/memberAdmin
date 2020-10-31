@@ -131,7 +131,7 @@
 	}
 
 	.uni-calender__body-date-week .uni-calender__date.uni-calender__date-current .uni-calender__circle-box {
-		background: #fd2e32
+		background: #258AFE
 	}
 
 	.uni-calender__body-date-week .uni-calender__date.uni-calender__date-current.uni-calender__active {
@@ -144,7 +144,7 @@
 
 	.uni-calender__body-date-week .uni-calender__date.uni-calender__date-current.uni-calender__multiple .uni-calender__circle-box {
 		border-radius: 50%;
-		background: #fd2e32
+		background: #258AFE
 	}
 
 	.uni-calender__body-date-week .uni-calender__date.uni-calender__date-current .uni-calender__lunar {

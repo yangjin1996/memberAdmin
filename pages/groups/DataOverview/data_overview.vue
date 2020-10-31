@@ -1,45 +1,75 @@
 <template>
 	<view class="container">
-		<view class="cu-list grid" :class="['col-' + cols, gridBorder ? '' : 'no-border']">
-			<view class="cu-item text-left" style="line-height: 46rpx;" v-for="(item, index) in datas" :key="index" @click="onClick" :data-index="index">
-				<view class="text-bold text-black text-30">{{ item.name }}</view>
-				<view class="text-black">今日：<span>{{ item.oldData }}</span></view>
-				<view class="text-black">昨日：<span>{{ item.newData }}</span></view>
-			</view>
-		</view>
-		<view class="data-scale" @click="showModal" data-target="DrawerModalR">
-			<u-echarts chartType="ring" :opts="opts"></u-echarts>
-		</view>
-		
-		<view class="cu-modal drawer-modal justify-end" :class="modalName=='DrawerModalR'?'show':''"  @tap="hideModal">
-			<view class="cu-dialog basis-lg" @tap.stop="" :style="[{width:'80vw',height:'100vh'}]">
-				<view class="cu-list menu text-left">
-					<view class="cu-item arrow" v-for="(item,index) in 2" :key="index">
-						<view class="content">
-							<view @click="showCalendars">Item {{index +1}}</view>
+		<scroll-view class="scroll-view-H" :style="scrollHeight" scroll-y="true" refresher-enabled="false"
+		 :refresher-triggered="triggered" :refresher-threshold="100" refresher-background="whitesmoke" 
+		 @refresherrefresh="onRefresh" @refresherrestore="onRestore">
+		<view class="user-data bg-color-white" v-for="(item,index) of 2" keys="index">
+			<view class="title text-color-3">用户数据</view>
+			<view class="main-container">
+				<view class="line1"></view>
+				<view class="line2"></view>
+				<view class="data-cell">
+					<view class="data-cell-title">新增用户</view>
+					<view class="data-detail">
+						<view class="data">
+							<view class="num text-bold text-color" :class="{'text-color-orange':index === 1}">632</view>
+							<view class="date text-color-9">今日</view>
+						</view>
+						<view class="data">
+							<view class="num text-bold text-color" :class="{'text-color-orange':index === 1}">582</view>
+							<view class="date text-color-9">昨日</view>
 						</view>
 					</view>
-					
-					<view class="" v-show="showCalendar">
-						<uni-calendar
-							:insert="true"
-							:lunar="tags[0].checked"
-							:disable-before="tags[3].checked"
-							:range="tags[5].checked"
-							:start-date="startDate"
-							:end-date="endDate"
-							:date="timeData.fulldate"
-							:selected="selected"
-							@change="change"
-							@onMonthSelect="onMonthSelect"
-						/>
+				</view>
+				<view class="data-cell">
+					<view class="data-cell-title">普通用户</view>
+					<view class="data-detail">
+						<view class="data">
+							<view class="num text-bold text-color" :class="{'text-color-orange':index === 1}">632</view>
+							<view class="date text-color-9">今日</view>
+						</view>
+						<view class="data">
+							<view class="num text-bold text-color" :class="{'text-color-orange':index === 1}">582</view>
+							<view class="date text-color-9">昨日</view>
+						</view>
 					</view>
-					
+				</view>
+				<view class="data-cell">
+					<view class="data-cell-title text-color-3">付费用户</view>
+					<view class="data-detail">
+						<view class="data">
+							<view class="num text-bold text-color" :class="{'text-color-orange':index === 1}">632</view>
+							<view class="date text-color-9">今日</view>
+						</view>
+						<view class="data">
+							<view class="num text-bold text-color" :class="{'text-color-orange':index === 1}">582</view>
+							<view class="date text-color-9">昨日</view>
+						</view>
+					</view>
+				</view>
+				<view class="data-cell">
+					<view class="data-cell-title">累计用户</view>
+					<view class="data-detail">
+						<view class="data">
+							<view class="num text-bold text-color" :class="{'text-color-orange':index === 1}">632</view>
+							<view class="date text-color-9">今日</view>
+						</view>
+						<view class="data">
+							<view class="num text-bold text-color" :class="{'text-color-orange':index === 1}">582</view>
+							<view class="date text-color-9">昨日</view>
+						</view>
+					</view>
 				</view>
 			</view>
 		</view>
-		
-		
+		<view class="data-scale">
+			<view class="headers bg-color=-white">
+				<view class="text text-color-3">提成（元）</view>
+				<image class="screen-icon" src="https://img02.mockplus.cn/idoc/ps/2020-10-29/ce2ce8c0-19a5-11eb-96f2-7dbb36504253.png" mode="" @click="toScreen"></image>
+			</view>
+			<u-echarts chartType="ring" :opts="opts"></u-echarts>
+		</view>
+		</scroll-view>
 	</view>
 </template>
 
@@ -119,24 +149,26 @@
 			];
 			return {
 				tags,
+				scrollHeight:0,
+				triggered: false,
 				opts: {
 						categories: [1,2,3,4,5],
-					  series: [{
-						name: "一班",
-						data: 50
-					  }, {
-						name: "二班",
-						data: 30
-					  }, {
-						name: "三班",
-						data: 20
-					  }, {
-						name: "四班",
-						data: 18
-					  }, {
-						name: "五班",
-						data: 8
-					  }]
+						series: [{
+							name: "一班",
+							data: 50
+						}, {
+							name: "二班",
+							data: 30
+						}, {
+							name: "三班",
+							data: 20
+						}, {
+							name: "四班",
+							data: 18
+						}, {
+							name: "五班",
+							data: 8
+						}]
 					},
 				startDate: '',
 				endDate: '',
@@ -210,13 +242,11 @@
 			};
 		},
 		onShow(){
-			uni.getStorageInfo({
-			    success: (res) => {
-			        console.log(res.keys);
-			        console.log(res.currentSize);
-			        console.log(res.limitSize);
-			    }
-			});
+			this.scrollHeight = 'height:' + (uni.getSystemInfoSync().windowHeight) + 'px';
+			this._freshing = false;
+			// setTimeout(() => {
+			// 	this.triggered = true;
+			// }, 1000)
 		},
 		computed: {
 			style() {
@@ -246,7 +276,6 @@
 			onClick(e) {
 				let index=e.currentTarget.dataset.index;
 				console.log('index',index)
-				// this.$emit('onclick', index);
 			},
 			onRight() {
 				// this.$emit('onright', true);
@@ -258,6 +287,24 @@
 			hideModal(e) {
 				this.modalName = null
 			},
+			toScreen(){
+				uni.navigateTo({
+					url:'../Screen/screen'
+				})
+			},
+			onRefresh() {
+				// if (this._freshing) return;
+				// this._freshing = true;
+				this.triggered = true;
+				setTimeout(() => {
+					this.triggered = false;
+					// this._freshing = false;
+				}, 300)
+			},
+			onRestore() {
+				console.log('onRestore')
+				this.triggered = 'restore'; // 需要重置
+			}
 		}
 	}
 </script>
@@ -268,8 +315,99 @@
 	}
 	.data-scale{
 		width:100%;
-		height:500rpx;
+		height:600rpx;
 		background-color: #fff;
 		margin-top: 40rpx;
+		.headers{
+			width:100%;
+			height:102rpx;
+			padding:0 30rpx;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px solid #eee;
+			.text{
+				font-size: 34rpx;
+			}
+			.screen-icon{
+				width:32rpx;
+				height:34rpx
+			}
+		}
+	}
+	
+	.user-data{
+		width:100%;
+		height: 500rpx;
+		padding:0 28rpx;
+		margin-bottom: 30rpx;
+		padding-bottom: 30rpx;
+		border-top: 1px solid #f7f7f7;
+		display: flex;
+		flex-direction: column;
+		.title{
+			height:90rpx;
+			font-size: 34rpx;
+			display: flex;
+			align-items: center;
+		}
+		.main-container{
+			width: 100%;
+			height: 0;
+			border-radius: 16rpx;
+			display: flex;
+			flex-wrap: wrap;
+			flex: 1;
+			border: 1px solid #f7f7f7;
+			box-shadow: 0 0 4rpx 4rpx #fafafa;
+			position: relative;
+			.line1{
+				width:90%;
+				height:2px;
+				background-color: #f7f7f7;
+				position: absolute;
+				left:5%;
+				top:50%;
+			}
+			.line2{
+				width:2px;
+				height:90%;
+				background-color: #f7f7f7;
+				position: absolute;
+				left:50%;
+				top:5%;
+			}
+			.data-cell{
+				width: 50%;
+				height:50%;
+				padding:30rpx 38rpx 20rpx 38rpx;
+				display: flex;
+				flex-direction: column;
+				.data-cell-title{
+					line-height: 56rpx;
+					font-size: 28rpx;
+				}
+				.data-detail{
+					width:100%;
+					height: 0;
+					padding:0 34rpx;
+					// margin-bottom: 10rpx;
+					display: flex;
+					flex: 1;
+					justify-content: space-between;
+					.data{
+						display: flex;
+						flex-direction: column;
+						justify-content: space-around;
+						.num{
+							font-size: 30rpx;
+						}
+						.date{
+							font-size: 22rpx;
+						}
+					}
+				}
+			}
+		}
 	}
 </style>

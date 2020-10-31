@@ -1,70 +1,97 @@
 <template>
 	<view class="container">
 		<view class="order-data">
-			<view class="order-data-cell">
-				<text>订单金额</text>
-				<text>今日：1234</text>
-				<text>昨日：36549</text>
+			<view class="order-data-cell bg-color-a">
+				<view class="text-left order-price text-color-white">订单金额</view>
+				<view class="data-detail">
+					<view class="order-price-left">
+						<text class="num text-color-white text-bold">1234</text>
+						<text class="text text-color-white">今日</text>
+					</view>
+					<view class="order-price-right">
+						<text class="num text-color-white text-bold">258</text>
+						<text class="text text-color-white">昨日</text>
+					</view>
+				</view>
+				
 			</view>
-			<view class="center-line"></view>
-			<view class="order-data-cell">
-				<text>订单金额</text>
-				<text>今日：1234</text>
-				<text>昨日：36549</text>
+			<view class="order-data-cell bg-color-b">
+				<view class="text-left order-price text-color-white">订单金额</view>
+				<view class="data-detail">
+					<view class="order-price-left">
+						<text class="num text-color-white text-bold">1234</text>
+						<text class="text text-color-white">今日</text>
+					</view>
+					<view class="order-price-right">
+						<text class="num text-color-white text-bold">258</text>
+						<text class="text text-color-white">昨日</text>
+					</view>
+				</view>
 			</view>
 		</view>
 		<view class="">
 			<view class="order-screen">
 				<view class="order-text text-bold">订单</view>
 				<view class="screen-icon">
-					<image class="icon-img" src="../../../../static/icon_add_img.png" mode=""></image>
-					<image class="icon-img icon-imgs" @click="showModal" data-target="DrawerModalR" src="../../../../static/icon_add_img.png" mode=""></image>
+					<image class="icon-img" @click="toOrderSearch" src="https://img02.mockplus.cn/idoc/ps/2020-10-28/36b14f10-192b-11eb-ac86-07ce5f71c012.png" mode=""></image>
+					<image class="icon-img icon-imgs" @click="toOrderScreen" src="https://img02.mockplus.cn/idoc/ps/2020-10-28/36b17621-192b-11eb-ac86-07ce5f71c012.png" mode=""></image>
 				</view>
 			</view>
-			
-			<view class="cu-modal drawer-modal justify-end" :class="modalName=='DrawerModalR'?'show':''"  @tap="hideModal">
-				<view class="cu-dialog basis-lg" @tap.stop="" :style="[{width:'80vw',height:'100vh'}]">
-					<view class="cu-list menu text-left">
-						<view class="cu-item arrow" v-for="(item,index) in 2" :key="index">
-							<view class="content">
-								<view>Item {{index +1}}</view>
-							</view>
-						</view>
-					</view>
-				</view>
-			</view>
-			
-			
 			<switchTab @switchTab="switchTab"></switchTab>
 			<view class="order-detail-container">
-				<view class="order-detail-list">
+				<view class="order-detail-list margin-bottom" v-for="(item,index) of 2" :keys="index">
 					<view class="user-msg-cell">
-						<view class="user-info">用户昵称：</view>
+						<view class="user-info">商品名称：</view>
 						<view class="user-info-msg">哈哈哈</view>
 					</view>
 					<view class="user-msg-cell">
-						<view class="user-info">用户账号：</view>
+						<view class="user-info">商品数量：</view>
 						<view class="user-info-msg">12345678952</view>
 					</view>
 					<view class="user-msg-cell">
-						<view class="user-info">用户身份：</view>
+						<view class="user-info">用户昵称：</view>
 						<view class="user-info-msg">3星</view>
 					</view>
 					<view class="user-msg-cell">
-						<view class="user-info">邀请人：</view>
+						<view class="user-info">用户账号：</view>
 						<view class="user-info-msg">张三</view>
 					</view>
 					<view class="user-msg-cell">
-						<view class="user-info">邀请用户数：</view>
+						<view class="user-info">订单创建时间：</view>
 						<view class="user-info-msg">10000</view>
 					</view>
 					<view class="user-msg-cell">
-						<view class="user-info">身份升级任务进度：</view>
+						<view class="user-info">订单支付时间：</view>
 						<view class="user-info-msg">已完成</view>
 					</view>
 					<view class="user-msg-cell">
-						<view class="user-info">总贡献分润：</view>
+						<view class="user-info">订单状态：</view>
 						<view class="user-info-msg">4526</view>
+					</view>
+					<view class="user-msg-cell">
+						<view class="user-info">提成获取人：</view>
+						<view class="user-info-msg">小进进</view>
+					</view>
+					<view class="user-msg-cell">
+						<view class="user-info">当前身份：</view>
+						<view class="user-info-msg">
+							<text class="cuIcon-favorfill text-color margin-left-xs"></text>
+							<text class="cuIcon-favorfill text-color margin-left-xs"></text>
+							<text class="cuIcon-favorfill text-color margin-left-xs"></text>
+						</view>
+					</view>
+					
+					<view class="user-msg-cell">
+						<view class="user-info">提成类型及金额：</view>
+						<view class="user-info-msg">4526</view>
+					</view>
+					<view class="user-msg-cell">
+						<view class="user-info"></view>
+						<view class="user-info-msg">小进进</view>
+					</view>
+					<view class="user-msg-cell">
+						<view class="user-info"></view>
+						<view class="user-info-msg">小进进</view>
 					</view>
 				</view>
 			</view>
@@ -87,12 +114,16 @@
 			switchTab(e){
 				console.log(e)
 			},
-			showModal(e) {
-				this.modalName = e.currentTarget.dataset.target
+			toOrderScreen(){
+				uni.redirectTo({
+					url:'../../orderScreen/order-screen'
+				})
 			},
-			hideModal(e) {
-				this.modalName = null
-			},
+			toOrderSearch(){
+				uni.navigateTo({
+					url:'../../searchUser/search-user'
+				})
+			}
 		}
 	}
 </script>
@@ -101,36 +132,65 @@
 	.container{
 		.order-data{
 			background-color: #fff;
-			padding: 0 50rpx;
-			margin-top: 40rpx;
-			height:300rpx;
+			padding: 0 10rpx;
+			height:246rpx;
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-around;
 			align-items: center;
+			border-top: 1px solid #eee;
 			.order-data-cell{
+				width: 46%;
+				height: 80%;
+				padding: 20rpx 40rpx;
+				border-radius: 16rpx;
+				background-color: red;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-			}
-			.center-line{
-				width:4rpx;
-				height:40%;
-				background-color: #ddd;
+				.order-price{
+					width: 100%;
+					font-size: 28rpx;
+				}
+				.data-detail{
+					width: 100%;
+					height: 0;
+					padding-top: 20rpx;
+					display: flex;
+					flex: 1;
+					justify-content: space-between;
+					align-items: center;
+					.order-price-left,.order-price-right{
+						height: 100%;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-around;
+						.num{
+							font-size: 36rpx;
+							font-weight: bold;
+						}
+						.text{
+							font-size: 24rpx;
+						}
+					}
+				}
 			}
 		}
 		.order-screen{
 			height: 100rpx;
 			padding:40rpx;
-			margin-top: 40rpx;
+			margin-top: 30rpx;
 			background-color: #fff;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			.order-text{
+				font-size: 34rpx;
+			}
 			.screen-icon{
 				.icon-img{
-					width:60rpx;
-					height:60rpx;
+					width:32rpx;
+					height:32rpx;
 				}
 				.icon-imgs{
 					margin-left:20rpx;
@@ -138,20 +198,24 @@
 			}
 		}
 		.order-detail-container{
-			padding:40rpx 20rpx 80rpx 20rpx;
+			padding:40rpx 20rpx;
 			background-color: #fff;
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			.order-detail-list{
-				background-color: #f5f5f5;
 				width:95%;
-				padding:40rpx 20rpx;
+				padding:30rpx 20rpx;
 				border-radius: 20rpx;
+				box-shadow: 0 0 4rpx 4rpx #f5f5f5;
 				.user-msg-cell{
 					display: flex;
 					.user-info,.user-info-msg{
 						line-height: 50rpx;
+					}
+					.user-info{
+						width: 40%;
 					}
 				}
 			}

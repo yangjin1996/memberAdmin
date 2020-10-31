@@ -51,7 +51,7 @@ export default {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-bottom: 4rpx solid #f5f5f5;
+		border-bottom: 2rpx solid #f5f5f5;
 	}
 	.tab-cell{
 		height:100%;
@@ -66,9 +66,9 @@ export default {
 		bottom: 0;
 	}
 	.on{
-		border: 2rpx solid red;
+		border: 2rpx solid #258AFE;
 	}
 	.text-on{
-		color: red;
+		color: #258AFE;
 	}
 </style>
