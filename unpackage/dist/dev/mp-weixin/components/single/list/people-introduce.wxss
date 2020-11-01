@@ -1,0 +1,10 @@
+
+.teacher-box{
+	background-color: #FFFFFF;
+	box-shadow: 0rpx 0rpx 10rpx rgba(21, 22, 23, 0.24);
+}
+.title-text{
+	font-size: 30rpx;
+	font-weight: bold;
+}
+

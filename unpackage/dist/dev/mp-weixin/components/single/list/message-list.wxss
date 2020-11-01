@@ -1,0 +1,12 @@
+
+.icon.data-v-5c74c4ae {
+	width: 88rpx;
+	height: 88rpx;
+}
+.shadow-box.data-v-5c74c4ae {
+	background-color: white;
+	box-shadow: 0rpx 0rpx 8rpx 1rpx rgba(0, 0, 0, 0.07);
+	margin: 30rpx 30rpx;
+	border-radius: 20rpx;
+}
+

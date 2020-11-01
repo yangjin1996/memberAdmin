@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "操作栏",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "bar": "/components/single/bar/tabbar",
+    "bottombar": "/components/single/bar/bottombar",
+    "btn-group": "/components/single/bar/btn-group"
+  }
+}

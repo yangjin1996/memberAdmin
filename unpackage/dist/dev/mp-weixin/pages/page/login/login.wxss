@@ -1,0 +1,109 @@
+
+.ab.data-v-394074bc {
+	position: absolute;
+	width: 100%;
+	bottom: 30rpx;
+}
+.percent-head.data-v-394074bc {
+	text-align: center;
+	position: relative;
+	font-size: 340%;
+}
+.percent-content.data-v-394074bc {
+	width: 100%;
+	position: relative;
+	font-size: 240%;
+	letter-spacing: 10rpx;
+}
+.btn0.data-v-394074bc {
+	font-size: 32rpx;
+	color: white;
+	background: -webkit-linear-gradient(177deg, rgba(179, 234, 187, 1), rgba(77, 193, 93, 1));
+	background: linear-gradient(-87deg, rgba(179, 234, 187, 1), rgba(77, 193, 93, 1));
+	width: 560rpx;
+	height: 98rpx;
+	border-radius: 99rpx;
+	margin: 20rpx auto;
+}
+.btn1.data-v-394074bc {
+	border: 4rpx solid #2dad3f;
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 99rpx;
+	width: 560rpx;
+	height: 98rpx;
+	font-size: 32rpx;
+	color: #2dad3f;
+	margin: 20rpx auto;
+}
+.pages-auth.data-v-394074bc {
+	margin: auto;
+	text-align: center;
+	border-radius: 20rpx;
+	background-color: #ffffff;
+	padding: 50rpx;
+}
+.content-desc.data-v-394074bc {
+	padding: 0.5rem;
+	line-height: 30rpx;
+	font-size: 30rpx;
+}
+.contents.data-v-394074bc {
+	background-image: url(https://www.homeeyes.cn/app/images/bgstart.png);
+	background-size: 100% 100%;
+	margin: 0;
+	padding: 50rpx;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	background-color: #02be6d;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.bottom-btn.data-v-394074bc {
+	margin-top: 30rpx;
+	margin-bottom: 20rpx;
+}
+.no-login.data-v-394074bc {
+	float: right;
+}
+.w-90.data-v-394074bc {
+	width: 90%;
+}
+.w-100.data-v-394074bc {
+	width: 100%;
+}
+.login_avatar.data-v-394074bc {
+	margin-top: 210rpx !important;
+}
+.v-center.data-v-394074bc {
+	margin: auto auto;
+}
+.back-img.data-v-394074bc {
+	height: 720rpx;
+}
+.cu-btn[class*='line'].data-v-394074bc::after {
+	border-radius: 20rpx;
+}
+.percent-image.data-v-394074bc{
+	text-align: center;
+	margin-top: 20rpx;
+}
+.percent-image image.data-v-394074bc{
+	border-radius: 50%;
+}
+.percents-boxs.data-v-394074bc{
+	margin: auto;
+	margin-top: 20%;
+}
+.percents.data-v-394074bc{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "导航栏",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cuheader": "/components/single/bar/header",
+    "search": "/components/single/search/cu-search",
+    "cu-bar": "/components/single/bar/cu-bar",
+    "bottom-search": "/components/single/bar/bottom-search"
+  }
+}

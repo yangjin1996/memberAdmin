@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "分页器",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {}
+}

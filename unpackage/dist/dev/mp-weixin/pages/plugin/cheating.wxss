@@ -1,0 +1,25 @@
+
+.item_box.data-v-f5bc36bc {
+	height: 33%;
+}
+.item_box image.data-v-f5bc36bc {
+	height: 160rpx;
+}
+image.cont.data-v-f5bc36bc {
+	width: 750rpx;
+	min-height: 100vh;
+	height: auto;
+	position: relative;
+}
+image.cont.data-v-f5bc36bc {
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+}
+.grid-boxs.data-v-f5bc36bc {
+	padding: 30rpx 10rpx;
+}
+.grid-boxs-hd.data-v-f5bc36bc {
+	text-align: center;
+}
+

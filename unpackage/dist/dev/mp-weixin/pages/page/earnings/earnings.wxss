@@ -1,0 +1,18 @@
+
+.round-21.data-v-21c73ff0 {
+	border-radius: 21rpx;
+}
+.text-center view.data-v-21c73ff0{
+	text-align: center;
+}
+.hd-head-show.data-v-21c73ff0{
+	
+	height: 400rpx;
+}
+.hd-head-content.data-v-21c73ff0{
+	line-height: 150rpx;
+}
+.text-size-50.data-v-21c73ff0{
+	color: #FF0000;
+}
+

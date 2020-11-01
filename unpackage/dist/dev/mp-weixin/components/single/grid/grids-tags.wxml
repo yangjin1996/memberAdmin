@@ -1,0 +1,1 @@
+<view class="padding-sm flex flex-wrap bg-white data-v-1a8e8816"><block wx:for="{{datas}}" wx:for-item="item" wx:for-index="index" wx:key="index"><block wx:if="{{item.name!='gray'}}"><view class="padding-xs data-v-1a8e8816"><view class="{{['cu-tag data-v-1a8e8816','bg-'+item.name]}}">{{item.title}}</view></view></block></block></view>

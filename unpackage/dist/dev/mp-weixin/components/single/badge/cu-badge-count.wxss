@@ -1,0 +1,29 @@
+
+.cu-tags.data-v-090b6e72 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.cu-capsule.data-v-090b6e72 {
+	padding: 20rpx 30rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	background-color: #ff0000;
+	width: 65%;
+	text-align: center;
+	margin: auto;
+}
+.cu-capsule-left.data-v-090b6e72,
+.cu-capsule-right.data-v-090b6e72 {
+	margin-left: 6rpx;
+	margin-right: 6rpx;
+	width: 50%;
+}
+.cu-capsules.data-v-090b6e72 {
+	text-align: center;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "数据概览",
+  "usingComponents": {
+    "u-echarts": "/components/u-charts/component",
+    "uni-calendar": "/components/group/uni-calendar/uni-calendar"
+  }
+}

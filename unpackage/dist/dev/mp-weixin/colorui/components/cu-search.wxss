@@ -1,0 +1,15 @@
+
+.cu-start.data-v-552c5310 {
+	font-size: 30rpx;
+	font-family: FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(85, 84, 84, 1);
+}
+.page-top.data-v-552c5310{
+	height: 100rpx;
+	line-height: 100rpx;
+}
+.cu-bar.data-v-552c5310{
+	border-top: #EDEDED 1rpx solid;
+}
+

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "轮播图",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cu-swiper": "/components/single/swiper/swiper",
+    "tower-swiper": "/components/single/swiper/tower-swiper",
+    "cu-bar": "/components/single/bar/cu-bar"
+  }
+}

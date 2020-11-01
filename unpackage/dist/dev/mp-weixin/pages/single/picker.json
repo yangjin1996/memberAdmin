@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "导航栏",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "address-picker": "/components/single/picker/address-picker",
+    "date-picker": "/components/single/picker/date-picker",
+    "single-picker": "/components/single/picker/single-picker",
+    "multi-picker": "/components/single/picker/multi-picker",
+    "time-picker": "/components/single/picker/time-picker"
+  }
+}

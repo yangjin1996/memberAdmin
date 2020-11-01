@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "订单列表",
+  "usingComponents": {
+    "switch-tab": "/components/custom_components/switch_tab"
+  }
+}

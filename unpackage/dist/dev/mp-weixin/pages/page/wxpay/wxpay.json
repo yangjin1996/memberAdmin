@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "确认订单",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "itemcell": "/components/single/grid/itemcell"
+  }
+}

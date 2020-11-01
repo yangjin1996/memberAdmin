@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "导航栏",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-steps": "/components/single/steps/cu-steps",
+    "uni-steps-num": "/components/single/steps/cu-steps-num",
+    "uni-steps-level": "/components/single/steps/cu-steps-level",
+    "steps-bar": "/components/single/steps/stepsBar"
+  }
+}

@@ -1,0 +1,12 @@
+
+.action-title.data-v-38b97dca {
+	font-size: 34rpx;
+	font-family:'黑体';
+	font-weight: 400;
+	color: rgba(70, 70, 70, 1);
+	line-height: 32rpx;
+}
+.cu-bar.data-v-38b97dca{
+	margin-bottom: 1rpx;
+}
+

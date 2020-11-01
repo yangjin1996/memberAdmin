@@ -1,0 +1,5 @@
+
+.cu-form-group + .cu-form-group {
+	border: none;
+}
+

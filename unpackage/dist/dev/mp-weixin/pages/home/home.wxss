@@ -1,0 +1,11 @@
+
+.grid.col-2.grid-square view.data-v-92bb8f34 {
+	padding: 30rpx;
+	height: 100rpx;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	text-align: center;
+	font-size: 30rpx;
+}
+

@@ -1,0 +1,1 @@
+<view class="data-v-f50b3c20"><view class="cu-timeline data-v-f50b3c20"><view class="cu-time data-v-f50b3c20">06-17</view><view class="{{['cu-item  data-v-f50b3c20','cuIcon-'+icon,'text-'+bgColor]}}"><view class="{{['content shadow-blur data-v-f50b3c20','bg-'+bgColor]}}"><slot name="content"></slot></view></view></view></view>

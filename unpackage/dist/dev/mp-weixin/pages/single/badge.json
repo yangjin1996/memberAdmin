@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "徽章",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cu-badge": "/components/single/badge/cu-badge"
+  }
+}

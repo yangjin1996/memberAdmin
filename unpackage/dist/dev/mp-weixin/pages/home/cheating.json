@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "抽屉",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {}
+}

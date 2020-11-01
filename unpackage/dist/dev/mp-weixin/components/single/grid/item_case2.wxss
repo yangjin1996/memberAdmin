@@ -1,0 +1,36 @@
+
+.grid.data-v-04c29c73 {
+	background-color: #FFFFFF;
+}
+.grid-item.data-v-04c29c73 {
+	padding: 10rpx;
+	background-color: #FFFFFF;
+}
+.case-image.data-v-04c29c73 {
+	height: 200rpx;
+	border-radius: 8rpx;
+}
+.cu-card.data-v-04c29c73 {
+	margin-top: 2rpx;
+}
+.case-text-title.data-v-04c29c73 {
+	padding-top: 10rpx;
+	padding-bottom: 10rpx;
+	font-size: 30rpx;
+	font-family: FZLTHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(85, 84, 84, 1);
+	line-height: 32rpx;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.case-text-desc.data-v-04c29c73 {
+	padding: 2rpx;
+	font-size: 24rpx;
+	font-family: FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(154, 152, 152, 1);
+	line-height: 32rpx;
+}
+

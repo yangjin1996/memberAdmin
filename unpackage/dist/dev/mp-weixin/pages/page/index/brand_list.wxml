@@ -1,0 +1,1 @@
+<scroll-view><view class="margin-top"><classesgrids vue-id="8a8f6988-1" datas="{{brand_list}}" data-event-opts="{{[['^onclickitem',[['openProjectFlow']]]]}}" bind:onclickitem="__e" bind:__l="__l"></classesgrids><cu-more vue-id="8a8f6988-2" title="没有更多记录了" bind:__l="__l"></cu-more></view></scroll-view>

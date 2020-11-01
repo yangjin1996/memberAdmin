@@ -1,0 +1,1 @@
+<view class="padding data-v-f824a2d8"><view class="{{['cu-card radius data-v-f824a2d8',bgcolor!=''?bgcolor:'']}}"><view class="title data-v-f824a2d8">{{title}}</view><view class="content data-v-f824a2d8"><slot name="content"></slot></view><view data-event-opts="{{[['tap',[['onClick',['$event']]]]]}}" class="bottom data-v-f824a2d8" bindtap="__e">查看更多</view></view></view>

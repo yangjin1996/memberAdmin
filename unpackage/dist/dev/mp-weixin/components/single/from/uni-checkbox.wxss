@@ -1,0 +1,12 @@
+
+.cu-form-toast.data-v-48f14b79 {
+	text-align: center;
+	padding: 6rpx;
+	font-size: 28rpx;
+	color: #ff0000;
+	border-top: solid 1rpx #efefef;
+	border-bottom: solid 1rpx #efefef;
+	background-color: #ffffff;
+	font-weight: 800;
+}
+

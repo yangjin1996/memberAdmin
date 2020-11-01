@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "转盘",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "grid-horse-race": "/components/single/grid/grid_horse_race",
+    "card-rule": "/components/single/card/card_rule"
+  }
+}

@@ -1,0 +1,14 @@
+
+.switch-sex.data-v-67561c64::after {
+	content: "\e716";
+}
+.switch-sex.data-v-67561c64::before {
+	content: "\e7a9";
+}
+.switch-music.data-v-67561c64::after {
+	content: "\e66a";
+}
+.switch-music.data-v-67561c64::before {
+	content: "\e6db";
+}
+

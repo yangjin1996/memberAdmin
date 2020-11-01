@@ -1,0 +1,14 @@
+
+.item-more.data-v-625dfe3d {
+	text-align: center;
+	font-size: 30rpx;
+	font-family: FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(154, 152, 152, 1);
+	line-height: 30rpx;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	padding: 10px;
+}
+

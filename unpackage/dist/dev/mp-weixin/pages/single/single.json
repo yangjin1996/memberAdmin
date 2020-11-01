@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "独立组件",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {}
+}

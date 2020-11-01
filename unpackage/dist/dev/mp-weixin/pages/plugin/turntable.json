@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "转盘",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "card-rule": "/components/single/card/card_rule"
+  }
+}

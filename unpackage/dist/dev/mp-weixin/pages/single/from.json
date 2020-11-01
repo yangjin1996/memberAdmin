@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "对话框",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-input": "/components/single/from/uni-input",
+    "uni-radio": "/components/single/from/uni-radio",
+    "uni-switch": "/components/single/from/uni-switch",
+    "uni-checkbox": "/components/single/from/uni-checkbox",
+    "cu-bar": "/components/single/bar/cu-bar",
+    "uni-uploader": "/components/single/upload/uni-uploader",
+    "checkitem": "/components/single/from/check-item"
+  }
+}

@@ -1,0 +1,35 @@
+
+image.data-v-2cc7c619 {
+	width: 88%;
+	height: 400rpx;
+}
+button.data-v-2cc7c619 {
+	display: inline-block;
+}
+.cu-tag.data-v-2cc7c619 {
+	position: absolute;
+	z-index: 100;
+	border-radius: 9rpx;
+}
+.br.data-v-2cc7c619 {
+	
+	text-decoration: underline;
+	color: red;
+	font-size: 26rpx;
+	padding: 0px 0px;
+	border-radius: 0px;
+	background: none;
+	position: absolute;
+	bottom: 120rpx;
+	right: 20rpx;
+	z-index: 1;
+}
+.grid-item.data-v-2cc7c619{
+	margin: 1%;
+	border-radius: 12rpx;
+	position: relative;
+}
+.grid.col-2>view.data-v-2cc7c619{
+	width: 48%;
+}
+

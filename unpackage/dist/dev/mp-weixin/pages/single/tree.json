@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "树状条",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {}
+}

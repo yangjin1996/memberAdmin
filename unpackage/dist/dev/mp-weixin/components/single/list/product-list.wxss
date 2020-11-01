@@ -1,0 +1,21 @@
+
+.m-shadow.data-v-1c16d5c1{
+	box-shadow: 0px 4px 21px 0px rgba(67,67,67,0.14);
+}
+.inline.data-v-1c16d5c1{
+	display: inline-block;
+}
+.item-img.data-v-1c16d5c1{
+	border-top-left-radius: 20rpx;
+	border-bottom-left-radius: 20rpx;
+}
+.item-info.data-v-1c16d5c1{
+	border-top-right-radius: 20rpx;
+	border-bottom-right-radius: 20rpx;
+}
+.cuIcon.data-v-1c16d5c1{
+	font-size: 125%;
+	padding: 10rpx 10rpx;
+	border-radius: 8rpx;
+}
+

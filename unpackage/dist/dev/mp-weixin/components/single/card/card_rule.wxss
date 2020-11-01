@@ -1,0 +1,33 @@
+
+.guize.data-v-2a266f88 {
+	width: 100%;
+	min-height: 360rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	position: relative;
+	z-index: 3;
+	/* background-image: linear-gradient(-180deg, #f48549 0%, #f2642e 100%); */
+	border: 18rpx solid #e4431a;
+	border-radius: 16px;
+	margin: 20rpx auto;
+	padding: 48rpx;
+	color: #fff;
+}
+.guize .title.data-v-2a266f88 {
+	text-align: center;
+	margin-bottom: 28rpx;
+}
+.guize .g_item.data-v-2a266f88 {
+	font-family: PingFang-SC-Medium;
+	font-size: 24rpx;
+	color: #ffffff;
+	letter-spacing: 0.5px;
+	text-align: justify;
+	line-height: 20px;
+}
+

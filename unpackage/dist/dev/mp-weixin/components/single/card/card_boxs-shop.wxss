@@ -1,0 +1,68 @@
+
+.title.data-v-6bb4c73f {
+	text-align: center;
+	line-height: 80rpx;
+	font-size: 36rpx;
+	margin-top: 10rpx;
+	font-weight: 700;
+}
+.bottom.data-v-6bb4c73f {
+	text-align: center;
+	line-height: 60rpx;
+	font-size: 26rpx;
+}
+.cu-card.data-v-6bb4c73f {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.cu-card-left.data-v-6bb4c73f {
+	width: 40%;
+	height: 280rpx;
+	position: relative;
+}
+.cu-card-left image.data-v-6bb4c73f {
+	width: 100%;
+	height: 100%;
+}
+.cu-card-bottom.data-v-6bb4c73f {
+	position: absolute;
+	bottom: 0;
+	background-color: #ff0000;
+	color: #ffffff;
+	text-align: center;
+	left: 0;
+	right: 0;
+}
+.cu-tag-top.data-v-6bb4c73f {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.cu-card-right.data-v-6bb4c73f {
+	width: 60%;
+	padding: 5rpx 20rpx;
+}
+.cu-progress.data-v-6bb4c73f {
+	width: 50%;
+}
+.cu-card-boxs.data-v-6bb4c73f {
+	position: relative;
+	height: 100%;
+}
+.cu-card-price.data-v-6bb4c73f {
+	position: absolute;
+	bottom: 0;
+	text-align: left;
+	left: 0;
+	right: 0;
+}
+.cu-card-tags.data-v-6bb4c73f {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.original.data-v-6bb4c73f{
+	text-decoration: line-through;
+}
+

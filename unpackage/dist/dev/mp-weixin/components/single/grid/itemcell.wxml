@@ -1,0 +1,1 @@
+<view class="su-itemcell data-v-7342f35c" id="el"><view class="su-itemcell-title data-v-7342f35c">{{title}}</view><view class="su-itemcell-value data-v-7342f35c">{{value}}</view></view>

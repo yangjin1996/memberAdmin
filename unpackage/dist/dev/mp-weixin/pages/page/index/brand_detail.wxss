@@ -1,0 +1,30 @@
+
+image {
+	width: 88%;
+	height: 400rpx;
+}
+button {
+	display: inline-block;
+}
+view.cu-tag {
+	position: absolute;
+	z-index: 999;
+	border-radius: 9rpx;
+}
+.br {
+	margin-top: 375rpx;
+	margin-left: -145rpx;
+	text-decoration: underline;
+	color: red;
+	font-size: 26rpx;
+	padding: 0px 0px;
+	border-radius: 0px;
+}
+image.img-top {
+	width: 100%;
+}
+.logo{
+	width: 120rpx;
+	height: 120rpx;
+}
+

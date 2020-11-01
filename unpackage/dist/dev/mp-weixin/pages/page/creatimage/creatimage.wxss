@@ -1,0 +1,26 @@
+
+.page-bottom button.data-v-0fad5e68 {
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+}
+.page-bottom.data-v-0fad5e68 {
+	padding: 20rpx;
+}
+.qrcode-box.data-v-0fad5e68 {
+	margin-right: auto;
+	margin-left: auto;
+}
+.qrcode-boxs.data-v-0fad5e68 {
+	text-align: center;
+	position: absolute;
+	bottom: 60rpx;
+	left: 0;
+	right: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.cu-btn.data-v-0fad5e68{
+	width: 100%;
+}
+

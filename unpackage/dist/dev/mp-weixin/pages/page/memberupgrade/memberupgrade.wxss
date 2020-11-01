@@ -1,0 +1,23 @@
+
+.page-cell-box {
+	margin-top: 5px;
+	background-color: white;
+}
+.page-cell {
+	text-align: left;
+	padding-left: 20rpx;
+	padding-right: 20rpx;
+	padding-bottom: 30rpx;
+	font-size: 32rpx;
+	font-family: FZLTHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(112, 111, 111, 1);
+}
+.page-cell button{
+	margin-top: 20rpx;
+	margin-bottom: 20rpx;
+}
+.margin-line{
+	margin-top: 2rpx;
+}
+

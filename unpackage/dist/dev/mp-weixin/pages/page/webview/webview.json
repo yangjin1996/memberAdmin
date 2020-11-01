@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "网页访问",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {}
+}

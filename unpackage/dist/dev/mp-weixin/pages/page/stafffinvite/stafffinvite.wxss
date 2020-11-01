@@ -1,0 +1,138 @@
+.invite-header-project.data-v-87127c70 {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		padding-left: 37rpx;
+		background-color: #EDEDED;
+		border-radius: 12rpx;
+		height: 200rpx;
+		line-height: 200rpx;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 10rpx;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		        align-items: center;
+}
+.invite-top.data-v-87127c70 {
+		width: 100%;
+		height: 500rpx;
+		padding-left: 100rpx;
+		padding-right: 100rpx;
+		padding-top: 130rpx;
+		background-size: 100% 100%;
+		background-image: url(http://www.homeeyes.cn/app/images/bg_share_top.png);
+}
+.invite-center.data-v-87127c70 {
+		width: 100%;
+		height: 230rpx;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 320rpx;
+		padding-top: 45rpx;
+		background-size: 100% 100%;
+		background-image: url(http://www.homeeyes.cn/app/images/bg_share_center.png);
+}
+.invite-header-boxs.data-v-87127c70 {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 430rpx;
+		padding-left: 24rpx;
+		padding-right: 24rpx;
+		text-align: center;
+}
+.invite-bottom.data-v-87127c70 {
+		width: 100%;
+		height: 875rpx;
+		padding-left: 10rpx;
+		padding-right: 10rpx;
+		padding-top: 24rpx;
+		padding-bottom: 16rpx;
+		background-size: 100% 100%;
+		background-image: url(http://www.homeeyes.cn/app/images/bg_share_bottom.png);
+}
+.invite-header-image.data-v-87127c70 {
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 50%;
+}
+.invite-header-project-image.data-v-87127c70 {
+		width: 120rpx;
+		height: 120rpx;
+		border-radius: 50%;
+		margin-right: 15rpx;
+}
+.header-project-text.data-v-87127c70 {
+		line-height: 36rpx;
+		padding-top: 4rpx;
+		padding-bottom: 4rpx;
+}
+.invite-header-project-text.data-v-87127c70,
+	.invite-header-project-image.data-v-87127c70 {
+		line-height: 200rpx;
+}
+.contents.data-v-87127c70 {
+		position: relative;
+		background-color: #FFFFFF;
+}
+.invite-header-text.data-v-87127c70 {
+		text-align: center;
+		line-height: 34rpx;
+}
+.header-boxs-user.data-v-87127c70 {
+		background: rgba(255, 255, 255, 1);
+		border-radius: 10rpx;
+		height: 273rpx;
+		text-align: center;
+		padding: 26rpx;
+}
+.invite-header-name.data-v-87127c70 {
+		font-size: 28rpx;
+		font-family: '黑体';
+		font-weight: 400;
+		color: rgba(255, 255, 255, 1);
+}
+.invite-header-title.data-v-87127c70 {
+		font-size: 40rpx;
+		font-family: SimHei;
+		font-weight: 400;
+		color: rgba(67, 66, 66, 1);
+		margin-top: 15rpx;
+}
+.invite-bottom-top.data-v-87127c70 {
+		background: rgba(235, 238, 245, 1);
+		padding-left: 14rpx;
+		padding-right: 14rpx;
+		padding-top: 16rpx;
+		padding-bottom: 16rpx;
+}
+.invite-bottom-bottom.data-v-87127c70 {
+		margin-top: 80rpx;
+}
+.invite-header-project-title.data-v-87127c70 {
+		font-size: 36rpx;
+		font-family: FZLTHK--GBK1-0;
+		font-weight: 400;
+		color: rgba(85, 84, 84, 1);
+		margin-bottom: 8rpx;
+}
+.project-item-title.data-v-87127c70 {
+		font-size: 26rpx;
+		font-family: FZLTKHK--GBK1-0;
+		font-weight: 400;
+		color: rgba(154, 152, 152, 1);
+		line-height: 36rpx;
+}
+.project-item-value.data-v-87127c70 {
+		font-size: 32rpx;
+		font-family: SimHei;
+		font-weight: 400;
+		color: rgba(0, 205, 118, 1);
+		line-height: 36rpx;
+		margin-left: 8rpx;
+}
+.page-bottom.data-v-87127c70 {
+	padding: 20rpx;
+}
+

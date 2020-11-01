@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "专属分享页",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "itemtotal": "/components/single/grid/item_total"
+  }
+}

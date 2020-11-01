@@ -1,0 +1,1 @@
+<view class="cu-form-group margin-line data-v-0cb5d5ea"><view class="title data-v-0cb5d5ea">{{title}}</view><switch class="{{['data-v-0cb5d5ea',Bgcolor,[(mold)?'radius':'',(switchC)?'checked':'',(modal=='sex')?'switch-sex':'']]}}" checked="{{switchC?true:false}}" data-event-opts="{{[['change',[['SwitchC',['$event']]]]]}}" bindchange="__e"></switch></view>

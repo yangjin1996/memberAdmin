@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "会员管理系统",
+  "usingComponents": {
+    "cu-grid": "/components/single/grid/cu-grid",
+    "cu-bar": "/components/single/bar/cu-bar"
+  }
+}

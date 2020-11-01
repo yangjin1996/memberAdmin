@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "列表",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cu-list": "/components/single/list/cu-list",
+    "peoplelist": "/components/single/list/people-introduce",
+    "messagelist": "/components/single/list/message-list",
+    "productlist": "/components/single/list/product-list",
+    "cu-bar": "/components/single/bar/cu-bar"
+  }
+}

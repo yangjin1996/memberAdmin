@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "条目",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cu-bar": "/components/single/bar/cu-bar",
+    "cell": "/components/single/cell/cell",
+    "cell-item": "/components/single/cell/cell-item",
+    "cell-avatar": "/components/single/cell/cell-avatar",
+    "cell-button": "/components/single/cell/cell-button",
+    "cell-tag": "/components/single/cell/cell-tag",
+    "cell-switch": "/components/single/cell/cell-switch"
+  }
+}

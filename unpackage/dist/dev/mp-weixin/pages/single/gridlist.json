@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "网格",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cu-grid": "/components/single/grid/cu-grid",
+    "typelist": "/components/single/grid/classify-list",
+    "cu-bar": "/components/single/bar/cu-bar",
+    "cases": "/components/single/grid/item_case2",
+    "caseslist": "/components/single/grid/item_case",
+    "designers": "/components/single/grid/item_designer2",
+    "designerlist": "/components/single/grid/item_designer",
+    "item-live": "/components/single/grid/item_live"
+  }
+}

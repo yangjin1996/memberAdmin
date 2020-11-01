@@ -1,0 +1,15 @@
+
+.cu-form-toast.data-v-093298f8 {
+	text-align: center;
+	padding: 6rpx;
+	font-size: 28rpx;
+	color: #ff0000;
+	border-top: solid 1rpx #efefef;
+	border-bottom: solid 1rpx #efefef;
+	background-color: #ffffff;
+	font-weight: 800;
+}
+.inputs.data-v-093298f8 {
+	width: 100%;
+}
+

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "注册用户",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "uni-input": "/components/single/from/uni-input",
+    "uni-button": "/components/single/button/uni-button",
+    "cu-badge": "/components/single/badge/cu-badge"
+  }
+}

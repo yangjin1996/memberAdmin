@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "itemtotal": "/components/single/grid/item_total",
+    "shoplist": "/components/single/list/shoplist"
+  }
+}

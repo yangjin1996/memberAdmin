@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "时间线",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cu-timeline": "/components/single/cu-timeline",
+    "cu-capsule": "/components/single/badge/cu-capsule"
+  }
+}

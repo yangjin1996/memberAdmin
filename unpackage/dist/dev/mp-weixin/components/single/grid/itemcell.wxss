@@ -1,0 +1,28 @@
+
+.su-itemcell.data-v-7342f35c {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	position: relative;
+	padding: 20rpx;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	background-color: #FFFFFF;
+	width: 100%;
+}
+.su-itemcell-title.data-v-7342f35c {
+	font-size: 32rpx;
+	font-family: FZLTHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(112, 111, 111, 1);
+}
+.su-itemcell-value.data-v-7342f35c {
+	position: absolute;
+	right: 1rem;
+	font-size: 28rpx;
+	font-family: FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(146, 145, 145, 1);
+}
+

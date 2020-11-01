@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "横幅",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cu-banner": "/colorui/components/cu-banner",
+    "banner": "/components/single/swiper/banner",
+    "banner-shadow": "/components/single/swiper/banner_shadow"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "翻卡",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "card-rule": "/components/single/card/card_rule",
+    "grid-board": "/components/single/grid/grid_board"
+  }
+}

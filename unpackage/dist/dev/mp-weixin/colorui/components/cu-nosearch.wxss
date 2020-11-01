@@ -1,0 +1,16 @@
+
+.cu-start.data-v-b35b20de {
+	font-size: 30rpx;
+	font-family: FZLTKHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(85, 84, 84, 1);
+}
+.contents_base.data-v-b35b20de{
+	margin: auto;
+}
+.page-contents.data-v-b35b20de{
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+

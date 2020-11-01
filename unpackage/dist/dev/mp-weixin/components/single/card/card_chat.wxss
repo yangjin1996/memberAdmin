@@ -1,0 +1,27 @@
+
+.cu-item.data-v-5251dde4 {
+	position: relative;
+}
+.cuIcon-roundcheckfill.data-v-5251dde4 {
+	font-size: 60rpx;
+	position: absolute;
+	right: 100rpx;
+	top: 70rpx;
+}
+.text-size-28.data-v-5251dde4 {
+	color: #ffffff;
+}
+.text-size-30.data-v-5251dde4 {
+	color: #f37b1d;
+}
+.text-size-50.data-v-5251dde4 {
+	color: #ff0000;
+	font-weight: bold;
+}
+.margin-line.data-v-5251dde4 {
+	margin-top: 2rpx;
+}
+.cardTitle.data-v-5251dde4 {
+	padding: 60rpx 60rpx;
+}
+

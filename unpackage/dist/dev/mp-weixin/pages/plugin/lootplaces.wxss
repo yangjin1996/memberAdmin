@@ -1,0 +1,23 @@
+
+.item_box.data-v-78943bb2 {
+	height: 33%;
+}
+.item_box image.data-v-78943bb2 {
+	height: 160rpx;
+}
+image.cont.data-v-78943bb2 {
+	width: 750rpx;
+	min-height: 100vh;
+	height: auto;
+	position: relative;
+}
+image.cont.data-v-78943bb2 {
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+}
+.grid-boxs.data-v-78943bb2 {
+	padding: 30rpx 10rpx;
+}
+
+

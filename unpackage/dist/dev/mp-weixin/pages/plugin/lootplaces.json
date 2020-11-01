@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "抢名额活动",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "card-invite": "/components/single/card/card_invite",
+    "card-boxs": "/components/single/card/card_boxs",
+    "cu-list-action": "/components/single/list/cu-list-action",
+    "card-rule": "/components/single/card/card_rule"
+  }
+}

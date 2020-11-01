@@ -33,7 +33,7 @@
 		</view>
 		
 		<view class="cu-modal drawer-modal justify-end calendar-box" :class="modalName=='DrawerModalR'?'show':''" @tap="hideModal">
-			<view class="cu-dialog basis-lg" @tap.stop="" :style="[{width:'700px',height:'100vh'}]">
+			<view class="cu-dialog basis-xl" @tap.stop="" :style="[{width:'700px',height:'100vh'}]">
 				<view class="cu-list menu text-left">
 					<view class="back-icon">
 						<text class="cuIcon-back" @click="hideModal"></text>
@@ -110,7 +110,7 @@
 				{
 					id: 5,
 					name: '范围选择',
-					checked: false,
+					checked: true,
 					attr: 'range'
 				},
 				{
@@ -221,7 +221,7 @@
 				this.modalName = null
 			},
 			change(e) {
-				// this.valDate([year,month,day],[year1,month1,day1])
+				console.log('e',e)
 				if(this.dateTime == 1){
 					this.newDate1 = e.fulldate;
 				}else if(this.dateTime == 2){

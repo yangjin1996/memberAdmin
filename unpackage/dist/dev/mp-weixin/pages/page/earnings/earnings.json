@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "收益",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "cell-list": "/components/single/list/cell-list",
+    "classesgrids": "/components/single/list/classes_grids_model2",
+    "classesgrids2": "/components/single/list/classes_grids_model3"
+  }
+}

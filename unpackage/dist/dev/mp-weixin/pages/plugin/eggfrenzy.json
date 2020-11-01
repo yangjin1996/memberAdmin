@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "砸蛋",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "card-rule": "/components/single/card/card_rule",
+    "grid-egg-frenzy": "/components/single/grid/grid_egg_frenzy"
+  }
+}

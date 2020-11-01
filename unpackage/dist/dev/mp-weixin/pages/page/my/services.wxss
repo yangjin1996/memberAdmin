@@ -1,0 +1,60 @@
+
+.from-cell-title.data-v-8b0aec4c {
+	font-size: 40rpx;
+	font-family: '黑体';
+	font-weight: 400;
+	color: rgba(70, 70, 70, 1);
+	line-height: 44rpx;
+	text-align: center;
+	margin-top: 60rpx;
+}
+.from-cell-desc.data-v-8b0aec4c {
+	font-size: 28rpx;
+	font-family: '黑体';
+	font-weight: 400;
+	margin-top: 30rpx;
+	color: rgba(120, 120, 120, 1);
+	line-height: 32rpx;
+	margin-bottom: 60rpx;
+	text-align: center;
+}
+.btn-commit.data-v-8b0aec4c{
+	margin-bottom: 20rpx;
+}
+.from-box.data-v-8b0aec4c{
+	background-color: #FFFFFF;
+	padding-left: 40rpx;
+	padding-right: 40rpx;
+}
+.container.data-v-8b0aec4c{
+	background-color: #FFFFFF;
+}
+.uni-padding-wrap.data-v-8b0aec4c{
+	text-align: center;
+	background-color: #FFFFFF;
+}
+.from-toast.data-v-8b0aec4c{
+	font-size: 28rpx;
+	font-family: '黑体';
+	font-weight: 400;
+	padding: 30rpx;
+	margin-top: 60rpx;
+	text-align: center;
+	color: rgba(120, 120, 120, 1);
+}
+.btn-commit-service.data-v-8b0aec4c{
+	
+	border-color: #04BE02;
+	color: #04BE02;
+	font-size: 28rpx;
+	font-family: '黑体';
+	font-weight: 400;
+}
+.cu-form-group.data-v-8b0aec4c{
+	background-color: #EDEDED;
+	border-radius: 20rpx;
+	margin-left: 40rpx;
+	margin-right: 40rpx;
+	margin-bottom: 20rpx;
+}
+

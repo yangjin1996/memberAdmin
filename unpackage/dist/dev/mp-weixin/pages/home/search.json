@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "抽屉",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "search": "/components/single/search/cu-search",
+    "cu-bar": "/components/single/bar/cu-bar",
+    "grids-tags": "/components/single/grid/grids-tags",
+    "cell-item": "/components/single/cell/cell-item"
+  }
+}

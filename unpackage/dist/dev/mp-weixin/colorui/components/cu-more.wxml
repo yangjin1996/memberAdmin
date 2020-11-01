@@ -1,0 +1,1 @@
+<view class="data-v-625dfe3d"><view data-event-opts="{{[['tap',[['toPage',['$event']]]]]}}" class="{{['item-more data-v-625dfe3d',(isTop)?'margin-line':'']}}" bindtap="__e">{{''+title+''}}<text class="icon-roundright data-v-625dfe3d"></text></view></view>

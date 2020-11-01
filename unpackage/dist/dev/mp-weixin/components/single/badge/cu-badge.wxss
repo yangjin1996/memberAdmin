@@ -1,0 +1,12 @@
+
+.cu-list.grid.cu-item .cu-tag.data-v-26adc720 {
+	right: auto;
+	left: auto;
+	margin-left: 0rpx;
+}
+.cu-list.grid.cu-item [class*='cuIcon'].data-v-26adc720 {
+	margin-top: 0rpx;
+	width: 100%;
+	font-size: 30rpx;
+}
+

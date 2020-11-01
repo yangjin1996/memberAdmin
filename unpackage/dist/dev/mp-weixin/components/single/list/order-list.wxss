@@ -1,0 +1,18 @@
+
+.cuIcon.data-v-7b440d82 {
+	font-size: 175%;
+}
+.h-line.data-v-7b440d82 {
+	width: 94%;
+	height: 1px;
+	background-color: #656565;
+	margin: auto auto;
+}
+image.data-v-7b440d82 {
+	width: 100%;
+	height: 100%;
+}
+.center.data-v-7b440d82 {
+	margin: auto 32rpx;
+}
+

@@ -1,0 +1,1 @@
+<view class="container data-v-032d0b08"><view class="contents data-v-032d0b08"><card-media vue-id="6274d6fe-1" datas="{{coupon}}" data-event-opts="{{[['^onclick',[['toChild']]]]}}" bind:onclick="__e" class="data-v-032d0b08" bind:__l="__l"></card-media></view><cu-more vue-id="6274d6fe-2" title="已没有更多内容咯" class="data-v-032d0b08" bind:__l="__l"></cu-more></view>

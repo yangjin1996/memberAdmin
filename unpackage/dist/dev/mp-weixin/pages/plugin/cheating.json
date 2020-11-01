@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "助力活动",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "card-boxs-shop": "/components/single/card/card_boxs-shop",
+    "cu-badge-count": "/components/single/badge/cu-badge-count",
+    "cu-grid-avatar": "/components/single/grid/cu-grid-avatar",
+    "list-image": "/components/single/list/list_image",
+    "card-rule": "/components/single/card/card_rule",
+    "card-boxs": "/components/single/card/card_boxs",
+    "cu-list-action": "/components/single/list/cu-list-action"
+  }
+}

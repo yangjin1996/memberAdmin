@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "日历",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-calendar": "/components/group/uni-calendar/uni-calendar",
+    "uni-calendar-green": "/components/group/uni-calendar/uni-calendar-green",
+    "uni-calendar-total": "/components/group/uni-calendar/uni-calendar-total"
+  }
+}

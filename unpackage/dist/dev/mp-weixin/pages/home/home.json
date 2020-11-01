@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "示例页面",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "grids": "/components/single/grid/grids"
+  }
+}

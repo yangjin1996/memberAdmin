@@ -1,0 +1,1 @@
+<view class="data-v-2c51ec82"><block wx:for="{{datas}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="cu-image data-v-2c51ec82" data-index="{{index}}" data-url="{{item}}" data-event-opts="{{[['tap',[['ViewImage',['$event']]]]]}}" bindtap="__e"><image src="{{item}}" class="data-v-2c51ec82"></image></view></block></view>

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "卡片",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "card-case": "/components/single/card/card_case",
+    "card-dynamic": "/components/single/card/card_dynamic",
+    "card-article": "/components/single/card/card_article"
+  }
+}

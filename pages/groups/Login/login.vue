@@ -40,7 +40,7 @@
 		onShow(){
 			uni.getSystemInfo({
 				success:(res) => {
-					this.screenHeight = res.screenHeight
+					this.screenHeight = res.windowHeight
 					console.log(this.screenHeight)
 				}
 			})

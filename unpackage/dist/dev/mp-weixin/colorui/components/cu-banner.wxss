@@ -1,0 +1,17 @@
+
+.cu-bar.data-v-42070a94 {
+	background: no-repeat;
+}
+.action.data-v-42070a94 {
+	margin-left: 20rpx;
+}
+.cu-custom-img.data-v-42070a94 {
+	width: 100%;
+}
+.cu-bar .content.data-v-42070a94{
+	font-size: 36rpx;
+	font-family: FZLTHK--GBK1-0;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+}
+

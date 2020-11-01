@@ -1,0 +1,1 @@
+<view class="data-v-12469448"><view class="cu-form-group data-v-12469448"><view class="title data-v-12469448">地址选择</view><picker mode="region" value="{{region}}" data-event-opts="{{[['change',[['RegionChange',['$event']]]]]}}" bindchange="__e" class="data-v-12469448"><view class="picker data-v-12469448">{{''+region[0]+"，"+region[1]+"，"+region[2]+''}}</view></picker></view></view>

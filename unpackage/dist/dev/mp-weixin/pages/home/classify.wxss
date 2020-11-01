@@ -1,0 +1,45 @@
+
+.fixed.data-v-a9bc17ea {
+	position: fixed;
+	z-index: 99;
+}
+.VerticalNav.nav.data-v-a9bc17ea {
+	width: 200rpx;
+	white-space: initial;
+}
+.VerticalNav.nav .cu-item.data-v-a9bc17ea {
+	width: 100%;
+	text-align: center;
+	background-color: #fff;
+	margin: 0;
+	border: none;
+	height: 50px;
+	position: relative;
+}
+.VerticalNav.nav .cu-item.cur.data-v-a9bc17ea {
+	background-color: #f1f1f1;
+}
+.VerticalNav.nav .cu-item.cur.data-v-a9bc17ea::after {
+	content: '';
+	width: 8rpx;
+	height: 30rpx;
+	border-radius: 10rpx 0 0 10rpx;
+	position: absolute;
+	background-color: currentColor;
+	top: 0;
+	right: 0rpx;
+	bottom: 0;
+	margin: auto;
+}
+.VerticalBox.data-v-a9bc17ea {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.VerticalMain.data-v-a9bc17ea {
+	background-color: #f1f1f1;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+}
+

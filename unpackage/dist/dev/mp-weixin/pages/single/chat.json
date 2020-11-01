@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "对话框",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cardchat": "/components/single/card/card_chat"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="data-v-2a266f88"><view class="{{['guize data-v-2a266f88',bgcolor!=''?bgcolor:'']}}"><view class="title data-v-2a266f88">{{title}}</view><block wx:for="{{datas}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="g_item data-v-2a266f88">{{index+1+"."+item}}</view></block></view></view>

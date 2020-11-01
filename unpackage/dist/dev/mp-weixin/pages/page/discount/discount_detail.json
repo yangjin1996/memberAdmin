@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "优惠详情",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "itemtotal": "/components/single/grid/item_total",
+    "card-media": "/components/single/card/card_media"
+  }
+}
