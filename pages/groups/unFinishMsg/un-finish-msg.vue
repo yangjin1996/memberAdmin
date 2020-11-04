@@ -67,10 +67,6 @@
 				<view class="sub-menu"></view>
 				<view class="">3. 还需提现X元</view>
 			</view>
-			<view class="msg-list-cell">
-				<view class="sub-menu">身份升级任务进度：</view>
-				<view class="text-finish">已完成</view>
-			</view>
 		</view>
 		<view class="msg-list">
 			<view class="title text-bold text-color-3">交易信息</view>
@@ -136,7 +132,7 @@
 		width: 94%;
 		margin: 0 auto;
 		margin-top: 30rpx;
-		padding:40rpx 20rpx;
+		padding:30rpx 20rpx;
 		background-color: #fff;
 		margin-bottom: 20rpx;
 		border-radius: 16rpx;

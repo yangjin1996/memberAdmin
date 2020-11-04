@@ -1,5 +1,5 @@
 <template>
-	<view class="container bg-color-white">
+	<view class="container bg-color-white" :style="{'height':screenHeight + 'px'}">
 		<view class="header">
 			<view class="title">筛选</view>
 			<image class="back-icon" src="https://img02.mockplus.cn/idoc/ps/2020-10-28/285708a0-192c-11eb-ac86-07ce5f71c012.png" mode="" @click="back"></image>
@@ -7,142 +7,86 @@
 		<view class="dimension">
 			<view class="title text-color-3">用户身份<text class="type margin-left-xs text-color-3">单选</text></view>
 			<view class="screen-type">
-				<view class="tab margin-left margin-bottom-sm text-color-9" @click="changeCondition" data-type="all" :class="{'on':condition === 'all'}">全部</view>
-				<view class="tab margin-left margin-bottom-sm text-color-9" @click="changeCondition" data-type="ordinary" :class="{'on':condition === 'ordinary'}">普通用户</view>
-				<view class="tab margin-left margin-bottom-sm text-color-9" @click="changeCondition" data-type="anchor" :class="{'on':condition === 'anchor'}">普通主播</view>
-				<view class="tab margin-left margin-bottom-sm text-color-9" @click="changeCondition" data-type="entrepreneurAnchor" :class="{'on':condition === 'entrepreneurAnchor'}">创业主播</view>
-				<view class="tab margin-left margin-bottom-sm text-color-9" @click="changeCondition" data-type="oneStar" :class="{'on':condition === 'oneStar'}">一星主播</view>
-				<view class="tab margin-left margin-bottom-sm text-color-9" @click="changeCondition" data-type="twoStar" :class="{'on':condition === 'twoStar'}">二星主播</view>
-				<view class="tab margin-left margin-bottom-sm text-color-9" @click="changeCondition" data-type="threeStar" :class="{'on':condition === 'threeStar'}">三星主播</view>
-				<view class="tab margin-left margin-bottom-sm text-color-9" @click="changeCondition" data-type="threeStarV" :class="{'on':condition === 'threeStarV'}">三星主播 (贡献值权益)</view>
+				<view 
+					class="tab margin-left margin-bottom-sm text-color-9" 
+					v-for="(item,index) of userId" 
+					:keys="index" 
+					@click="changeCondition" 
+					:data-type="item.conditionValue" 
+					:class="{'on':item.conditionValue === condition}">
+					{{item.text}}
+				</view>
 			</view>
 		</view>
 		
 		<view class="submit-container">
-			<view class="reset" @click="userOperate" data-type="reset" :class="{'on':operate === 'reset'}">重置</view>
-			<view class="submit" @click="userOperate" data-type="submit" :class="{'on':operate === 'submit'}">确定</view>
+			<view class="reset" @click="userOperate" data-type="reset">重置</view>
+			<view class="submit on" @click="userOperate" data-type="submit">确定</view>
 		</view>
 		
-		<view class="cu-modal drawer-modal justify-end" :class="modalName=='DrawerModalR'?'show':''" @tap="hideModal">
-			<view class="cu-dialog basis-lg" @tap.stop="" :style="[{width:'80vw',height:'100vh'}]">
-				<view class="cu-list menu text-left">
-					<view class="">返回</view>
-					<view class="">
-						<uni-calendar
-							:insert="true"
-							:lunar="tags[0].checked"
-							:disable-before="tags[3].checked"
-							:range="tags[5].checked"
-							:start-date="startDate"
-							:end-date="endDate"
-							:date="timeData.fulldate"
-							:selected="selected"
-							@change="change"
-							@onMonthSelect="onMonthSelect"
-						/>
-					</view>
-					
-				</view>
-			</view>
+		<view class="cu-load load-modal" v-show="loadModal">
+			<image src="/static/logo.png" mode="aspectFit"></image>
+			<view class="gray-text">加载中...</view>
 		</view>
 	</view>
 </template>
 
 <script>
-	import uniCalendar from '@/components/group/uni-calendar/uni-calendar.vue';
 	export default {
-		components:{
-			uniCalendar
-		},
 		data() {
-			let tags = [
-				{
-					id: 0,
-					name: '农历',
-					checked: false,
-					attr: 'lunar'
-				},
-				{
-					id: 1,
-					name: '开始日期(' + getDate(new Date(), -1) + ')',
-					checked: false,
-					value: getDate(new Date(), -1),
-					attr: 'startDate'
-				},
-				{
-					id: 2,
-					name: '结束日期(' + getDate(new Date(), 2) + ')',
-					value: getDate(new Date(), 2),
-					checked: false,
-					attr: 'endDate'
-				},
-				{
-					id: 3,
-					name: '禁用今天之前的日期',
-					checked: false,
-					attr: 'disableBefore'
-				},
-				{
-					id: 4,
-					name: '自定义当前日期(' + getDate(new Date(), 1) + ')',
-					value: getDate(new Date(), 1),
-					checked: false,
-					attr: 'date'
-				},
-				{
-					id: 5,
-					name: '范围选择',
-					checked: false,
-					attr: 'range'
-				},
-				{
-					id: 6,
-					name: '打点',
-					value: [
-						{
-							date: '2019-10-26',
-							info: '打卡'
-						},
-						{
-							date: '2019-10-27',
-							info: '签到',
-							data: {
-								custom: '自定义信息',
-								name: '自定义消息头'
-							}
-						},
-						{
-							date: '2019-10-28',
-							info: '已打卡'
-						}
-					],
-					checked: true,
-					attr: 'selected'
-				}
-			];
 			return {
+				screenHeight:0,
 				condition:'all',
 				operate:'submit',
-				modalName: null,
-				tags,
-				startDate: '',
-				endDate: '',
-				selected: [],
-				timeData: {
-					clockinfo: '',
-					date: '',
-					fulldate: '',
-					lunar: '',
-					month: '',
-					range: '',
-					year: ''
-				}
+				criteria:'',
+				loadModal: false,
+				userId:[
+					{
+						conditionValue:'all',
+						text:'全部'
+					},
+					{
+						conditionValue:'ordinary',
+						text:'普通用户'
+					},
+					{
+						conditionValue:'anchor',
+						text:'普通主播'
+					},
+					{
+						conditionValue:'entrepreneurAnchor',
+						text:'创业主播'
+					},
+					{
+						conditionValue:'oneStar',
+						text:'一星主播'
+					},
+					{
+						conditionValue:'twoStar',
+						text:'二星主播'
+					},
+					{
+						conditionValue:'threeStar',
+						text:'三星主播'
+					},
+					{
+						conditionValue:'threeStarV',
+						text:'三星主播 (贡献值权益)'
+					},
+				]
 			};
+		},
+		onShow(){
+			uni.getSystemInfo({
+				success:(res) => {
+					this.screenHeight = res.windowHeight
+				}
+			})
 		},
 		methods:{
 			back(){
 				uni.redirectTo({
-					url:'../ConsumerList/consumer_list'
+					url:`../ConsumerList/consumer_list`
 				})
 			},
 			changeCondition(e){
@@ -150,26 +94,19 @@
 			},
 			userOperate(e){
 				this.operate = e.currentTarget.dataset.type;
-				console.log(this.operate)
-				if(this.operate = 'reset'){
+				if(this.operate === 'reset'){
 					this.condition = 'all'
+				}else{
+					this.loadModal = true;
+					setTimeout(() => {
+						this.loadModal = false;
+						let url = this.condition === 'all' ? `../ConsumerList/consumer_list` : `../ConsumerList/consumer_list?type=${this.condition}`
+						uni.redirectTo({
+							url
+						})
+					}, 2000)
 				}
-			},
-			showModal(e) {
-				this.modalName = e.currentTarget.dataset.target
-			},
-			hideModal(e) {
-				this.modalName = null
-			},
-			change(e) {
-				console.log('change 返回:', e);
-				this.timeData = e;
-				this.infoShow = true;
-			},
-			onMonthSelect(m) {
-				this.slmonth = m;
-				this.onInitInfo();
-			},
+			}
 		}
 	}
 </script>
@@ -204,7 +141,7 @@
 		.dimension{
 			.title{
 				font-size: 30rpx;
-				line-height: 150rpx;
+				line-height: 120rpx;
 				padding-left: 50rpx;
 				.type{
 					font-size: 24rpx;

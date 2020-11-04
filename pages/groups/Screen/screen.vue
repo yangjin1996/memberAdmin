@@ -1,5 +1,5 @@
 <template>
-	<view class="container bg-color-white">
+	<view class="container bg-color-white" :style="{'height':screenHeight + 'px'}">
 		<view class="header">
 			<text class="cuIcon-close back-icon text-color-9" @click="back"></text>
 			<view class="title">筛选</view>
@@ -139,6 +139,7 @@
 				}
 			];
 			return {
+				screenHeight:0,
 				loadModal: false,
 				newDate1:'',
 				newDate2:'',
@@ -166,6 +167,11 @@
 		},
 		methods:{
 			initData(){
+				uni.getSystemInfo({
+					success:(res) => {
+						this.screenHeight = res.windowHeight
+					}
+				})
 				let date = new Date();
 				let d = this.dateFormat("YYYY-mm-dd", date);
 				this.newDate1 = this.newDate2  = d;
@@ -191,7 +197,7 @@
 			},
 			back(){
 				uni.redirectTo({
-					url:'../DataOverview/data_overview'
+					url:`../DataOverview/data_overview`
 				})
 			},
 			changeCondition(e){
@@ -203,12 +209,11 @@
 					this.condition = 'commission';
 					this.initData();
 				}else{
-					console.log(this.newDate1.replace(/-/g,''))
 					this.loadModal = true;
 					setTimeout(() => {
 						this.loadModal = false;
 						uni.redirectTo({
-							url:'../DataOverview/data_overview'
+							url:`../DataOverview/data_overview?condition=${this.condition}&time1=${this.newDate1}&time2=${this.newDate2}`
 						})
 					}, 2000)
 				}
@@ -221,14 +226,17 @@
 				this.modalName = null
 			},
 			change(e) {
-				console.log('e',e)
+				if(e.range.data.length > 0){
+					this.newDate1 = e.range.begin;
+					this.newDate2 = e.range.end;
+					return
+				}
 				if(this.dateTime == 1){
 					this.newDate1 = e.fulldate;
 				}else if(this.dateTime == 2){
 					this.newDate2 = e.fulldate;
 				}
 				this.timeData = e;
-				this.infoShow = true;
 			},
 			onMonthSelect(m) {
 				this.slmonth = m;

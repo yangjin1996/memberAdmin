@@ -57,17 +57,23 @@
 				<view class="sub-menu">邀请用户数：</view>
 				<view class="">222</view>
 			</view>
-			<view class="msg-list-cell">
+			<view class="msg-list-cell" v-if="finished">
 				<view class="sub-menu">身份升级任务进度：</view>
-				<view class="">1. 还需直推X个创业主播</view>
+				<view class="text-finish">已完成</view>
 			</view>
-			<view class="msg-list-cell">
-				<view class="sub-menu"></view>
-				<view class="">2. 还需X个创业主播</view>
-			</view>
-			<view class="msg-list-cell">
-				<view class="sub-menu"></view>
-				<view class="">3. 还需提现X元</view>
+			<view class="" v-else>
+				<view class="msg-list-cell">
+					<view class="sub-menu">身份升级任务进度：</view>
+					<view class="">1. 还需直推X个创业主播</view>
+				</view>
+				<view class="msg-list-cell">
+					<view class="sub-menu"></view>
+					<view class="">2. 还需X个创业主播</view>
+				</view>
+				<view class="msg-list-cell">
+					<view class="sub-menu"></view>
+					<view class="">3. 还需提现X元</view>
+				</view>
 			</view>
 		</view>
 		<view class="msg-list">
@@ -123,8 +129,11 @@
 	export default {
 		data() {
 			return {
-				
+				finished:true
 			};
+		},
+		onLoad(option){
+			this.finished = option.finished
 		}
 	}
 </script>
@@ -134,7 +143,7 @@
 		width: 94%;
 		margin: 0 auto;
 		margin-top: 30rpx;
-		padding:40rpx 20rpx;
+		padding:20rpx 20rpx;
 		background-color: #fff;
 		margin-bottom: 20rpx;
 		border-radius: 16rpx;

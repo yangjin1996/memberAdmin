@@ -26,7 +26,6 @@
 </template>
 
 <script>
-	import Util from '../../../common/util.js'
 	export default {
 		data() {
 			return {
@@ -41,7 +40,6 @@
 			uni.getSystemInfo({
 				success:(res) => {
 					this.screenHeight = res.windowHeight
-					console.log(this.screenHeight)
 				}
 			})
 		},
@@ -69,9 +67,6 @@
 				}
 			},
 			login(){
-				// setTimeout(function(){
-				// 	console.log(222)
-				// },3000)
 				if(this.verifyData(this.account,this.psd)){
 					uni.redirectTo({
 						url:'../../homes/index/index'
@@ -80,13 +75,13 @@
 			},
 			verifyData(account,psd){
 				if(account === ''){
-					Util.showToast({
+					this.$util.showToast({
 						title:'请输入千马账号'
 					})
 					return false
 				}
 				if(psd === ''){
-					Util.showToast({
+					this.$util.showToast({
 						title:'请输入登录密码'
 					})
 					return false

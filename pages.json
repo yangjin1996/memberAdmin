@@ -873,6 +873,24 @@
 				"navigationBarTitleText": "余额明细"
 			}
         }
+        ,{
+            "path" : "pages/groups/Withdrawal/Withdrawal",
+            "style" : {
+				"navigationBarTitleText": "申请提现"
+			}
+        }
+        ,{
+            "path" : "pages/groups/acountList/acountList",
+            "style" : {
+				"navigationBarTitleText": "账户列表"
+			}
+        }
+        ,{
+            "path" : "pages/groups/acountEdit/acountEdit",
+            "style" : {
+				"navigationBarTitleText": "新增账户"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

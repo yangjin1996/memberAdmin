@@ -244,9 +244,11 @@
 		onShow(){
 			this.scrollHeight = 'height:' + (uni.getSystemInfoSync().windowHeight) + 'px';
 			this._freshing = false;
-			// setTimeout(() => {
-			// 	this.triggered = true;
-			// }, 1000)
+		},
+		onLoad(option){
+			if(Object.keys(option).length > 0){
+				console.log('初始化数据')
+			}
 		},
 		computed: {
 			style() {
@@ -380,7 +382,7 @@
 			.data-cell{
 				width: 50%;
 				height:50%;
-				padding:30rpx 38rpx 20rpx 38rpx;
+				padding:20rpx 38rpx 10rpx 38rpx;
 				display: flex;
 				flex-direction: column;
 				.data-cell-title{

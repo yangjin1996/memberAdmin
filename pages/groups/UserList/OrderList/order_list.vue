@@ -40,58 +40,12 @@
 			<switchTab @switchTab="switchTab"></switchTab>
 			<view class="order-detail-container">
 				<view class="order-detail-list margin-bottom" v-for="(item,index) of 2" :keys="index">
-					<view class="user-msg-cell">
-						<view class="user-info">商品名称：</view>
-						<view class="user-info-msg">哈哈哈</view>
-					</view>
-					<view class="user-msg-cell">
-						<view class="user-info">商品数量：</view>
-						<view class="user-info-msg">12345678952</view>
-					</view>
-					<view class="user-msg-cell">
-						<view class="user-info">用户昵称：</view>
-						<view class="user-info-msg">3星</view>
-					</view>
-					<view class="user-msg-cell">
-						<view class="user-info">用户账号：</view>
-						<view class="user-info-msg">张三</view>
-					</view>
-					<view class="user-msg-cell">
-						<view class="user-info">订单创建时间：</view>
-						<view class="user-info-msg">10000</view>
-					</view>
-					<view class="user-msg-cell">
-						<view class="user-info">订单支付时间：</view>
-						<view class="user-info-msg">已完成</view>
-					</view>
-					<view class="user-msg-cell">
-						<view class="user-info">订单状态：</view>
-						<view class="user-info-msg">4526</view>
-					</view>
-					<view class="user-msg-cell">
-						<view class="user-info">提成获取人：</view>
-						<view class="user-info-msg">小进进</view>
-					</view>
-					<view class="user-msg-cell">
-						<view class="user-info">当前身份：</view>
-						<view class="user-info-msg">
-							<text class="cuIcon-favorfill text-color margin-left-xs"></text>
-							<text class="cuIcon-favorfill text-color margin-left-xs"></text>
-							<text class="cuIcon-favorfill text-color margin-left-xs"></text>
+					<view class="user-msg-cell" v-for="(item,index) of userMsgList" :keys="index">
+						<view class="user-info text-color-3">{{item.definition}}</view>
+						<view class="user-info-msg text-color-3" v-if="!!item.isStar">
+							<text class="cuIcon-favorfill text-color margin-left-xs" v-for="(item,index) of item.isStar" :keys="index"></text>
 						</view>
-					</view>
-					
-					<view class="user-msg-cell">
-						<view class="user-info">提成类型及金额：</view>
-						<view class="user-info-msg">4526</view>
-					</view>
-					<view class="user-msg-cell">
-						<view class="user-info"></view>
-						<view class="user-info-msg">小进进</view>
-					</view>
-					<view class="user-msg-cell">
-						<view class="user-info"></view>
-						<view class="user-info-msg">小进进</view>
+						<view class="user-info-msg" :class="{'text-finish':item.finish}" v-else>{{item.value}}</view>
 					</view>
 				</view>
 			</view>
@@ -108,6 +62,54 @@
 		data() {
 			return {
 				modalName: null,
+				userMsgList:[
+					{
+						definition:'商品名称：',
+						value:'哈哈哈'
+					},
+					{
+						definition:'商品数量：',
+						value:'258'
+					},
+					{
+						definition:'用户昵称：',
+						value:'小进进'
+					},
+					{
+						definition:'用户账号：',
+						value:'25585556558855'
+					},
+					{
+						definition:'订单创建时间：',
+						value:'2020-01-06'
+					},
+					{
+						definition:'订单支付时间：',
+						value:'2020-02-22'
+					},
+					{
+						definition:'订单状态：',
+						value:'已完成'
+					},
+					{
+						definition:'提成获取人：',
+						value:'小进进'
+					},
+					{
+						definition:'当前身份：',
+						value:'小进进',
+						isStar:4
+					},
+					{
+						definition:'提成类型及金额：',
+						value:'55555',
+						subMenu:[
+							'111111',
+							'222222',
+							'333333'
+						]
+					},
+				]
 			};
 		},
 		methods:{
@@ -121,7 +123,7 @@
 			},
 			toOrderSearch(){
 				uni.navigateTo({
-					url:'../../searchUser/search-user'
+					url:'../../searchUser/search-user?type=order'
 				})
 			}
 		}
@@ -210,6 +212,7 @@
 				border-radius: 20rpx;
 				box-shadow: 0 0 4rpx 4rpx #f5f5f5;
 				.user-msg-cell{
+					height: 60rpx;
 					display: flex;
 					.user-info,.user-info-msg{
 						line-height: 50rpx;

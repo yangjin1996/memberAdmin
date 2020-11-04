@@ -9,14 +9,14 @@
 				<text class="text-color-3 title">订单创建时间</text>
 				<view class="">
 					<text class="text-color-9">{{creatTime}}</text>
-					<text class="cuIcon-right margin-left text-color-9"></text>
+					<text class="cuIcon-right margin-left-xs text-color-9"></text>
 				</view>
 			</view>
 			<view class="time-e" @click="showModal" data-target="DrawerModalR" data-type="2">
 				<text class="text-color-3 title">订单支付时间</text>
 				<view class="">
 					<text class="text-color-9">{{payTime}}</text>
-					<text class="cuIcon-right margin-left text-color-9"></text>
+					<text class="cuIcon-right margin-left-xs text-color-9"></text>
 				</view>
 			</view>
 		</view>
@@ -41,18 +41,17 @@
 		</view>
 		
 		<view class="submit-container">
-			<view class="reset" @click="userOperate" data-type="reset" :class="{'on':operate === 'reset'}">重置</view>
-			<view class="submit" @click="userOperate" data-type="submit" :class="{'on':operate === 'submit'}">确定</view>
+			<view class="reset" @click="userOperate" data-type="reset">重置</view>
+			<view class="submit on" @click="userOperate" data-type="submit">确定</view>
 		</view>
 		
 		<view class="cu-modal drawer-modal justify-end" :class="modalName=='DrawerModalR'?'show':''" @tap="hideModal">
-			<view class="cu-dialog basis-lg" @tap.stop="" :style="[{width:'80vw',height:'100vh'}]">
+			<view class="cu-dialog basis-xl" @tap.stop="" :style="[{width:'80vw',height:'100vh'}]">
 				<view class="cu-list menu text-left">
 					<view class="cal-header">
-						<text class="cuIcon-back"></text>
+						<text class="cuIcon-back" @tap="hideModal"></text>
 						<text>选择日期</text>
 					</view>
-					
 					<view class="">
 						<uni-calendar
 							:insert="true"
@@ -67,9 +66,13 @@
 							@onMonthSelect="onMonthSelect"
 						/>
 					</view>
-					
 				</view>
 			</view>
+		</view>
+		
+		<view class="cu-load load-modal" v-show="loadModal">
+			<image src="/static/logo.png" mode="aspectFit"></image>
+			<view class="gray-text">加载中...</view>
 		</view>
 	</view>
 </template>
@@ -118,7 +121,7 @@
 				{
 					id: 5,
 					name: '范围选择',
-					checked: false,
+					checked: true,
 					attr: 'range'
 				},
 				{
@@ -147,6 +150,7 @@
 				}
 			];
 			return {
+				loadModal:null,
 				operate:'submit',
 				condition:'all',
 				conditions:'all',
@@ -178,8 +182,18 @@
 			userOperate(e){
 				this.operate = e.currentTarget.dataset.type;
 				if(this.operate === 'reset'){
-					this.condition = 'all'
-					this.conditions = 'all'
+					this.condition = 'all';
+					this.conditions = 'all';
+					this.creatTime = '请选择';
+					this.payTime = '请选择';
+				}else{
+					this.loadModal = true;
+					setTimeout(() => {
+						this.loadModal = false;
+						uni.redirectTo({
+							url:`../UserList/OrderList/order_list?creatTime=${this.creatTime}&payTime=${this.payTime}&orderStatus=${this.condition}&deliverStatus=${this.conditions}`
+						})
+					}, 2000)
 				}
 			},
 			changeCondition(e){
@@ -188,7 +202,6 @@
 			changeConditions(e){
 				this.conditions = e.currentTarget.dataset.type
 			},
-			
 			showModal(e) {
 				this.modalName = e.currentTarget.dataset.target;
 				this.dataType = e.currentTarget.dataset.type;
@@ -197,6 +210,15 @@
 				this.modalName = null
 			},
 			change(e) {
+				if(e.range.data.length > 0){
+					if(this.dataType == 1){
+						this.creatTime = e.range.begin + '至' + e.range.end;
+					}
+					if(this.dataType == 2){
+						this.payTime = e.range.begin + '至' + e.range.end;
+					}
+					return
+				}
 				if(this.dataType == 1){
 					this.creatTime = e.fulldate
 				}else{

@@ -22,7 +22,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="submit bg-color text-color-white">提交</view>
+		<view class="submit bg-color text-color-white" @click="toWithdrawal">提交</view>
 		<view class="text-color-3 balance-detail text-center" @click="toSurplus">余额明细</view>
 	</view>
 </template>
@@ -43,6 +43,11 @@
 			toSurplus(){
 				uni.navigateTo({
 					url:'../Surplus/surplus'
+				})
+			},
+			toWithdrawal(){
+				uni.navigateTo({
+					url:'../Withdrawal/Withdrawal'
 				})
 			}
 		}

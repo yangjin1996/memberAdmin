@@ -1,5 +1,10 @@
 <template>
-	<view class="container">
+	<view class="container" :style="{'height':screenHeight + 'px'}">
+		<navigation-bar
+		  :title="nbTitle"
+		  front-color="#333333"
+		  background-color="#ffffff"
+		/>
 		<view class="input-container bg-color-white">
 			<view class="input-box">
 				<view class="condition" @click="showSearch">
@@ -62,7 +67,7 @@
 				<view class="user-info text-color-3">本月贡献分润：</view>
 				<view class="user-info-msg text-color-3">123</view>
 			</view>
-			<view class="uer-info-detail text-center text-color-9" @click="toDetail">
+			<view class="uer-info-detail text-center text-color-9" v-show="type" @click="toDetail">
 				查看详细信息<text class="cuIcon-right margin-left-xs"></text>
 			</view>
 		</view>
@@ -74,10 +79,12 @@
 </template>
 
 <script>
-	import Util from '../../../common/util.js'
 	export default {
 		data() {
 			return {
+				screenHeight:0,
+				nbTitle:'',
+				type:'',
 				loadModal:false,
 				shoSearchType:false,
 				selected:'nickname',
@@ -87,6 +94,17 @@
 				showDelIcon:false,
 				showUserDetail:false
 			};
+		},
+		onLoad(option){
+			this.type = option.type === 'order' ? false : true;
+			this.nbTitle = option.type === 'order' ? '搜索订单' : '搜索用户';
+		},
+		onShow(){
+			uni.getSystemInfo({
+				success:(res) => {
+					this.screenHeight = res.windowHeight
+				}
+			})
 		},
 		methods:{
 			showSearch(){
@@ -102,7 +120,7 @@
 				if(!this.value.trim()){
 					this.value = '';
 					this.showDelIcon = false;
-					Util.showToast({
+					this.$util.showToast({
 						title:'请输入搜索内容'
 					})
 				}else{
@@ -114,6 +132,7 @@
 				}
 			},
 			inputEvent(){
+				// if(!/^[0-9]*$/.test(this.value)) console.log("请输入数字!");
 				this.showDelIcon = !!this.value;
 			},
 			delateValue(){
@@ -214,7 +233,7 @@
 			}
 		}
 		.uer-info-detail{
-			margin-top:60rpx;
+			margin-top:40rpx;
 			font-size: 24rpx;
 		}
 	}

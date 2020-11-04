@@ -21,7 +21,7 @@
 							<text class="number text-color-orange text-bold">360</text>
 						</view>
 						<view class="data-detail-row">
-							<text class="text-color-6 text">昨日</text>
+							<text class="text-color-6 text">累计</text>
 							<text class="number text-color text-bold">859</text>
 						</view>
 					</view>
@@ -37,7 +37,7 @@
 							<text class="number text-color-orange text-bold">360</text>
 						</view>
 						<view class="data-detail-row">
-							<text class="text-color-6 text">昨日</text>
+							<text class="text-color-6 text">累计</text>
 							<text class="number text-color text-bold">859</text>
 						</view>
 					</view>
@@ -49,7 +49,6 @@
 </template>
 
 <script>
-	import Util from '../../../common/util.js';
 	import cuGrid from '../../../components/single/grid/cu-grid.vue';
 	import cuBar from '../../../components/single/bar/cu-bar.vue';
 	
@@ -94,6 +93,7 @@
 				],
 			};
 		},
+
 		methods:{
 			navigate(e){
 				e = parseInt(e);
@@ -102,7 +102,7 @@
 				});
 			},
 			logout(e){
-				Util.showModal({
+				this.$util.showModal({
 					content: '确定要退出登录吗？',
 					success: (res) => {
 						if (res.confirm) {

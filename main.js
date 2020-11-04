@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App'
 import controller from './util/controller'
 import store from './store' 
-import util from './util/util'
+import util from './common/util.js'
 // 公用组件
 import cuCustom from './colorui/components/cu-custom.vue'
 Vue.component('cu-custom',cuCustom)
@@ -20,19 +20,19 @@ import more from './colorui/components/cu-more.vue'
 Vue.component('cu-more',more)
 import grids from './components/single/grid/grids.vue';
 Vue.component('grids',grids)
-// import ShowModel from './components/custom_components/show_model.vue';
-// Vue.component('show-model',ShowModel)
+import ShowModel from './components/custom_components/show_model.vue';
+Vue.component('show-model',ShowModel)
 Vue.config.productionTip = false
-Vue.prototype.util = util;
+Vue.prototype.$util = util;
 Vue.prototype.$controller = controller;
 Vue.prototype.$store = store;
-// Vue.prototype.$ShowModel = ShowModel;
+Vue.prototype.$ShowModel = ShowModel;
 App.mpType = 'app'
 
 const app = new Vue({
 	store,
 	controller,
-	// ShowModel,
+	ShowModel,
     ...App
 })
 app.$mount()

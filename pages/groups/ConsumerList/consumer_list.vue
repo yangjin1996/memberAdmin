@@ -1,6 +1,5 @@
 <template>
 	<view class="container">
-		
 		<view class="header">
 			<view class="title">用户列表</view>
 			<view class="user-info">
@@ -12,65 +11,18 @@
 				</view>
 			</view>
 		</view>
-		
-		<view class="cu-modal drawer-modal justify-end" :class="modalName=='DrawerModalR'?'show':''"  @tap="hideModal">
-			<view class="cu-dialog basis-lg" @tap.stop="" style="width:80vw;height:100vh">
-				<view class="cu-list menu text-left">
-					<view class="cu-item arrow" v-for="(item,index) in 2" :key="index">
-						<view class="content">
-							<view>Item {{index +1}}</view>
-						</view>
-					</view>
-				</view>
-			</view>
-		</view>
-		
 		<view class="user-container">
-			<view class="user-msg-cell">
-				<view class="user-info text-color-3">用户昵称：</view>
-				<view class="user-info-msg text-color-3">哈哈哈</view>
-			</view>
-			<view class="user-msg-cell">
-				<view class="user-info text-color-3">用户账号：</view>
-				<view class="user-info-msg text-color-3">12345678952</view>
-			</view>
-			<view class="user-msg-cell">
-				<view class="user-info text-color-3">用户身份：</view>
-				<view class="user-info-msg text-color-3">
-					<text class="cuIcon-favorfill text-color margin-left-xs"></text>
-					<text class="cuIcon-favorfill text-color margin-left-xs"></text>
-					<text class="cuIcon-favorfill text-color margin-left-xs"></text>
+			<view class="user-msg-cell" v-for="(item,index) of userMsgList" :keys="index">
+				<view class="user-info text-color-3">{{item.definition}}</view>
+				<view class="user-info-msg text-color-3" v-if="!!item.isStar">
+					<text class="cuIcon-favorfill text-color margin-left-xs" v-for="(item,index) of item.isStar" :keys="index"></text>
 				</view>
-			</view>
-			<view class="user-msg-cell">
-				<view class="user-info text-color-3">主播关系邀请人：</view>
-				<view class="user-info-msg text-color-3">张三</view>
-			</view>
-			<view class="user-msg-cell">
-				<view class="user-info text-color-3">用户关系邀请人：</view>
-				<view class="user-info-msg text-color-3">李四</view>
-			</view>
-			<view class="user-msg-cell">
-				<view class="user-info text-color-3">邀请人用户数：</view>
-				<view class="user-info-msg text-color-3">123</view>
-			</view>
-			<view class="user-msg-cell">
-				<view class="user-info text-color-3">身份升级任务进度：</view>
-				<view class="user-info-msg" :class="{'text-finish':true}">已完成</view>
-			</view>
-			<view class="user-msg-cell">
-				<view class="user-info text-color-3">总贡献提成：</view>
-				<view class="user-info-msg text-color-3">4526</view>
-			</view>
-			<view class="user-msg-cell">
-				<view class="user-info text-color-3">本月贡献提成：</view>
-				<view class="user-info-msg text-color-3">123</view>
+				<view class="user-info-msg" :class="{'text-finish':item.finish}" v-else>{{item.value}}</view>
 			</view>
 			<view class="uer-info-detail text-center text-color-9" @click="toDetail">
 				查看详细信息<text class="cuIcon-right margin-left-xs"></text>
 			</view>
 		</view>
-		
 	</view>
 </template>
 
@@ -78,19 +30,65 @@
 	export default {
 		data() {
 			return {
-				modalName: null
+				modalName: null,
+				refresh:false,
+				userMsgList:[
+					{
+						definition:'用户昵称：',
+						value:'小进进'
+					},
+					{
+						definition:'用户账号：',
+						value:'59875455666588'
+					},
+					{
+						definition:'用户身份：',
+						value:'小进进',
+						isStar:4
+					},
+					{
+						definition:'主播关系邀请人：',
+						value:'张三'
+					},
+					{
+						definition:'用户关系邀请人：',
+						value:'李四'
+					},
+					{
+						definition:'邀请用户数：',
+						value:'123'
+					},
+					{
+						definition:'身份升级任务进度：',
+						value:'已完成',
+						finish:true
+					},
+					{
+						definition:'总贡献提成：',
+						value:'4526'
+					},
+					{
+						definition:'本月贡献值提成：',
+						value:'123'
+					}
+				]
 			};
+		},
+		onShow(){
+			if(this.refresh){
+				console.log('初始化数据')
+			}
+		},
+		onLoad(option){
+			if(Object.keys(option).length > 0){
+				this.refresh = true
+			}
 		},
 		methods:{
 			toDetail(){
+				// 携带是否完成任务参数finished
 				uni.navigateTo({
-					// url:'../../groups/UserMsg/user_msg',
-					url:'../../groups/unFinishMsg/un-finish-msg',
-				});
-			},
-			search(){
-				uni.navigateTo({
-					url:'../../groups/searchUser/search-user',
+					url:`../../groups/UserMsg/user_msg?finished=1`
 				});
 			},
 			showModal(e) {
@@ -100,26 +98,10 @@
 					url:'../../groups/userScreen/user-screen',
 				});
 			},
-			hideModal(e) {
-				this.modalName = null
-			},
-			bindDateChange: function(e) {
-				this.date = e.target.value
-			},
-			getDate(type) {
-				const date = new Date();
-				let year = date.getFullYear();
-				let month = date.getMonth() + 1;
-				let day = date.getDate();
-	
-				if (type === 'start') {
-					year = year - 60;
-				} else if (type === 'end') {
-					year = year + 2;
-				}
-				month = month > 9 ? month : '0' + month;;
-				day = day > 9 ? day : '0' + day;
-				return `${year}-${month}-${day}`;
+			search(){
+				uni.navigateTo({
+					url:'../../groups/searchUser/search-user?type=user',
+				});
 			}
 		}
 	}
@@ -179,7 +161,7 @@
 				}
 			}
 			.uer-info-detail{
-				margin-top:60rpx;
+				margin-top:40rpx;
 				font-size: 24rpx;
 			}
 		}
